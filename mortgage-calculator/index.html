@@ -15,8 +15,48 @@
   </style>
 </head>
 <body>
+  <div class="calculator-container">
+    <div class="calculator-input">
+      <h1>Mortgage Calculator</h1>
+      <a href="#" class="clear-all">Clear All</a>
+      <form id="calculator-form">
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <div class="input-group">
+          <span>£</span>
+          <input type="number" id="mortgage-amount" placeholder="300,000">
+        </div>
+        
+        <label for="mortgage-term">Mortgage Term</label>
+        <div class="input-group">
+          <input type="number" id="mortgage-term" placeholder="25">
+          <span>years</span>
+        </div>
 
-  Mortgage Calculator
+        <label for="interest-rate">Interest Rate</label>
+        <div class="input-group">
+          <input type="number" id="interest-rate" placeholder="5.25">
+          <span>%</span>
+        </div>
+
+        <label>Mortgage Type</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="mortgage-type" value="repayment" checked>
+            Repayment
+          </label>
+          <label>
+            <input type="radio" name="mortgage-type" value="interest-only">
+            Interest Only
+          </label>
+        </div>
+
+        <button type="button" id="calculate-btn">
+          Calculate Repayments
+        </button>
+      </form>
+    </div>
+
+  <!-- Mortgage Calculator
   Clear All
 
   Mortgage Amount
@@ -29,27 +69,27 @@
   Repayment
   Interest Only
 
-  Calculate Repayments
+  Calculate Repayments -->
 
   <!-- Empty results start -->
 
-  Results shown here
+  <!-- Results shown here
 
   Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+  your monthly repayments would be. -->
 
   <!-- Empty results end -->
 
   <!-- Completed results start -->
 
-  Your results
+  <!-- Your results
 
   Your results are shown below based on the information you provided. 
   To adjust the results, edit the form and click “calculate repayments” again.
 
   Your monthly repayments
 
-  Total you'll repay over the term
+  Total you'll repay over the term -->
 
   <!-- Completed results end -->
   
