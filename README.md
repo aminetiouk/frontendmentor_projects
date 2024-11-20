@@ -4,16 +4,16 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 
 ## Table of Contents
 
-- [Project 1: Product List with Cart](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-list-with-cart-main)
+- [Project 1: Mortgage Repayment Calculator](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
 
 
 ## Projects
 
 ### Product List with Cart
-- **Description**: This project is a product list with a cart feature. Users can add products to the cart, view their cart, and simulate checkout functionality.
+- **Description**: This project is a calculator to estimate monthly mortgage repayments. Users can input the loan amount, interest rate, and loan term to calculate their monthly payment and view a repayment breakdown.
 - **Technology Stack**: HTML, CSS, JavaScript, Sass
-- **Branch**: `frontendmentor/product-list-with-cart-main`
-- **Repository**: [Product List with Cart Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-list-with-cart-main)
+- **Branch**: `mortgage-calculator`
+- **Repository**: [Mortgage Repayment Calculator Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
 
 ## Getting Started
 
