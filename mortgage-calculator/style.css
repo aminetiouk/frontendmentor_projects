@@ -22,4 +22,30 @@ body {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;
+  background-color: #e8f6f8;
+  color: #333;
+}
+
+.calculator-container {
+  display: flex;
+  max-width: 900px;
+  max-height: 100vh;
+  margin: 50px auto;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
+}
+
+.calculator-input {
+  flex: 1;
+  padding: 2rem;
+}
+
+.calculator-results {
+  flex: 1;
+  padding: 2rem;
+  background-color: #04553c;
+  color: #fff;
+  border-bottom-left-radius: 4rem;
 }
