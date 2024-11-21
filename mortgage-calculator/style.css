@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Variable font supports all weights from 100 to 900 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Variable font supports all weights for italic */
+  font-style: italic;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+}
