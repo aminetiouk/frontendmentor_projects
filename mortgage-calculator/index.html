@@ -1,76 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="calculator-container">
-    <div class="calculator-input">
-      <h1>Mortgage Calculator</h1>
-      <a href="#" class="clear-all">Clear All</a>
-      <form id="calculator-form">
-        <label for="mortgage-amount">Mortgage Amount</label>
-        <div class="input-group">
-          <span>£</span>
-          <input type="number" id="mortgage-amount" placeholder="300,000">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator-input">
+        <h1>Mortgage Calculator</h1>
+        <a href="#" class="clear-all">Clear All</a>
+        <form id="calculator-form">
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <div class="input-group">
+            <input type="number" id="mortgage-amount" placeholder="300,000" />
+            <span class="input-icon">
+              <i class="fa-solid fa-sterling-sign"></i>
+            </span>
+          </div>
+
+          <label for="mortgage-term">Mortgage Term</label>
+          <div class="input-group">
+            <input type="number" id="mortgage-term" placeholder="25" />
+            <span>years</span>
+          </div>
+
+          <label for="interest-rate">Interest Rate</label>
+          <div class="input-group">
+            <input type="number" id="interest-rate" placeholder="5.25" />
+            <span>%</span>
+          </div>
+
+          <label>Mortgage Type</label>
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                name="mortgage-type"
+                value="repayment"
+                checked
+              />
+              Repayment
+            </label>
+            <label>
+              <input type="radio" name="mortgage-type" value="interest-only" />
+              Interest Only
+            </label>
+          </div>
+
+          <button type="button" id="calculate-btn">Calculate Repayments</button>
+        </form>
+      </div>
+
+      <div class="calculator-results">
+        <h2>Your results</h2>
+        <p>
+          Your results are shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+        <div class="result-box">
+          <h3>Your monthly repayments</h3>
+          <p id="monthly-repayment">£0.00</p>
+          <h3>Total you'll repay over the term</h3>
+          <p id="total-repayment">£0.00</p>
         </div>
-        
-        <label for="mortgage-term">Mortgage Term</label>
-        <div class="input-group">
-          <input type="number" id="mortgage-term" placeholder="25">
-          <span>years</span>
-        </div>
-
-        <label for="interest-rate">Interest Rate</label>
-        <div class="input-group">
-          <input type="number" id="interest-rate" placeholder="5.25">
-          <span>%</span>
-        </div>
-
-        <label>Mortgage Type</label>
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="mortgage-type" value="repayment" checked>
-            Repayment
-          </label>
-          <label>
-            <input type="radio" name="mortgage-type" value="interest-only">
-            Interest Only
-          </label>
-        </div>
-
-        <button type="button" id="calculate-btn">
-          Calculate Repayments
-        </button>
-      </form>
-    </div>
-
-    <div class="calculator-results">
-      <h2>Your results</h2>
-      <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-      <div class="result-box">
-        <h3>Your monthly repayments</h3>
-        <p id="monthly-repayment">£0.00</p>
-        <h3>Total you'll repay over the term</h3>
-        <p id="total-repayment">£0.00</p>
       </div>
     </div>
-  </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/aminetiouk/">Amine Tiouk</a>.
-  </div>
-</body>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://www.linkedin.com/in/aminetiouk/">Amine Tiouk</a>.
+    </div>
+  </body>
 </html>
