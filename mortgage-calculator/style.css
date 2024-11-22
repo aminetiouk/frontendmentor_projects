@@ -61,3 +61,29 @@ h3 {
   margin: 10px 0;
   font-size: 1.2em;
 }
+
+a.clear-all {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: .9em;
+  color: #666;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
