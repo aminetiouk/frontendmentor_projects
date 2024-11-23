@@ -1,13 +1,15 @@
 @font-face {
   font-family: 'Plus Jakarta Sans';
-  src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+    format('truetype');
   font-weight: 100 900; /* Variable font supports all weights from 100 to 900 */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Plus Jakarta Sans';
-  src: url('./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url('./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf')
+    format('truetype');
   font-weight: 100 900; /* Variable font supports all weights for italic */
   font-style: italic;
 }
@@ -34,10 +36,11 @@ body {
   background-color: #fff;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.calculator-input, .calculator-results {
+.calculator-input,
+.calculator-results {
   flex: 1;
   padding: 2rem;
 }
@@ -52,7 +55,8 @@ body {
   background: #f9fafa;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   font-size: 1.5em;
 }
@@ -61,11 +65,13 @@ h3 {
   margin: 10px 0;
   font-size: 1.2em;
 }
-
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 a.clear-all {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: .9em;
+  font-size: 0.9em;
   color: #666;
   cursor: pointer;
 }
@@ -78,12 +84,17 @@ label {
 .input-group {
   display: flex;
   align-items: center;
-  gap: 5px;
+  background: #f7fafd;
+  border-radius: 4px;
+  border: 1px solid #cfd8dc;
 }
 
 .input-group input {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+    cursor: pointer;
 }
