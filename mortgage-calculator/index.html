@@ -35,15 +35,17 @@
   <body>
     <div class="calculator-container">
       <div class="calculator-input">
-        <h1>Mortgage Calculator</h1>
-        <a href="#" class="clear-all">Clear All</a>
+        <div class="nav-bar">
+          <h1>Mortgage Calculator</h1>
+          <a id="clear-all" class="clear-all">Clear All</a>
+        </div>
         <form id="calculator-form">
           <label for="mortgage-amount">Mortgage Amount</label>
           <div class="input-group">
-            <input type="number" id="mortgage-amount" placeholder="300,000" />
             <span class="input-icon">
               <i class="fa-solid fa-sterling-sign"></i>
             </span>
+            <input type="number" id="mortgage-amount" placeholder="300,000" />
           </div>
 
           <label for="mortgage-term">Mortgage Term</label>
