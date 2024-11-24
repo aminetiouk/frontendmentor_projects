@@ -49,6 +49,7 @@ body {
   background-color: #04553c;
   color: #fff;
   border-bottom-left-radius: 4rem;
+  display: flex;
 }
 
 .calculator-input {
@@ -168,5 +169,19 @@ a.clear-all {
 }
 
 
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
+.empty p {
+  text-align: center;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.5;
+}
 
