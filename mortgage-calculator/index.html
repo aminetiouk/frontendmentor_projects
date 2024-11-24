@@ -97,13 +97,20 @@
       </div>
 
       <div class="calculator-results">
-        <h2>Your results</h2>
-        <p>
-          Your results are shown below based on the information you provided. To
-          adjust the results, edit the form and click “calculate repayments”
-          again.
-        </p>
-        <div class="result-box">
+        <div class="empty">
+          <div class="illustration">
+            <img src="./assets/images/illustration-empty.svg" alt="">
+          </div>
+          <h2 id="result-title">Result shown here</h2>
+          <p id="result-description">
+            Complete the form and click "calculate repayments" to see what your monthly repayments would be.
+          </p>
+        </div>
+        <div class="result-box" style="display: none;">
+          <h2>Your results</h2>
+          <p>Your results are shown below based on the information you provided. To
+            adjust the results, edit the form and click “calculate repayments”
+            again.</p>
           <h3>Your monthly repayments</h3>
           <p id="monthly-repayment">£0.00</p>
           <h3>Total you'll repay over the term</h3>
