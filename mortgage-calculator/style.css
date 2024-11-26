@@ -252,3 +252,19 @@ a.clear-all {
   font-weight: 500;
   padding-top: 1rem;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .calculator-container {
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+
+  .calculator-input, .calculator-results {
+    padding: 1rem;
+  }
+
+  .calculator-results {
+    border-bottom-left-radius: 0;
+  }
+}
