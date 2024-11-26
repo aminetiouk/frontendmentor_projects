@@ -212,6 +212,10 @@ a.clear-all {
   width: 10rem;
 }
 
+.result-box {
+  display: none;
+}
+
 .result-box h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -258,6 +262,8 @@ a.clear-all {
   .calculator-container {
     flex-direction: column;
     margin: 2rem 1rem;
+    height: auto;
+    overflow: auto;
   }
 
   .calculator-input, .calculator-results {
@@ -276,5 +282,27 @@ a.clear-all {
   .input-column .label {
     padding: 0;
     margin: .8rem 0;
+  }
+
+  .input-icon {
+    padding: 0.625rem 1.125rem;
+  }
+
+  #calculate-btn {
+    border-radius: 1.5rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .illustration img {
+    width: 8rem;
+    margin-top: 1rem;
+  }
+  .empty p {
+    padding: 1rem;
+    letter-spacing: 0.063rem;
+  }
+
+  .result-box {
+    padding: 1rem;
   }
 }
