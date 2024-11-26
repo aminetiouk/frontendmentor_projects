@@ -267,4 +267,14 @@ a.clear-all {
   .calculator-results {
     border-bottom-left-radius: 0;
   }
+
+  .input-column {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input-column .label {
+    padding: 0;
+    margin: .8rem 0;
+  }
 }
