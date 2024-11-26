@@ -1,3 +1,4 @@
+/* General Reset */
 @font-face {
   font-family: 'Plus Jakarta Sans';
   src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
@@ -30,9 +31,10 @@ body {
 
 .calculator-container {
   display: flex;
+  flex-direction: row;
   max-width: 900px;
   max-height: 100vh;
-  margin: 20% auto;
+  margin: 5% auto;
   background-color: #fff;
   overflow: hidden;
   border-radius: 0.625rem;
@@ -50,12 +52,16 @@ body {
   color: #fff;
   border-bottom-left-radius: 4rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator-input {
   background: #f9fafa;
 }
 
+/* Typography */
 h1,
 h2 {
   margin: 0;
@@ -66,6 +72,8 @@ h3 {
   margin: 0.625rem 0;
   font-size: 1.2em;
 }
+
+/* Inputs and Labels */
 .nav-bar {
   display: flex;
   align-items: center;
