@@ -191,6 +191,11 @@ a.clear-all {
   cursor: pointer;
 }
 
+#calculate-btn:hover {
+  background-color: #5bd020;
+  transition: background-color .8s ease;
+}
+
 
 .empty {
   display: flex;
