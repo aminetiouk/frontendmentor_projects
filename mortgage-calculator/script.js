@@ -42,3 +42,14 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
   document.querySelector('.result-box').style.display = 'block';
   document.querySelector('.empty').style.display = 'none';
 });
+
+document.getElementById('clear-all').addEventListener('click', () => {
+  document.getElementById('mortgage-amount').value = '';
+  document.getElementById('mortgage-term').value = '';
+  document.getElementById('interest-rate').value = '';
+  document.querySelector('input[name="mortgage-type"]:checked').checked = false;
+  document.getElementById('monthly-repayment').textContent = '£0.00';
+  document.getElementById('total-repayment').textContent = '£0.00';
+  document.querySelector('.empty').style.display = 'flex';
+  document.querySelector('.result-box').style.display = 'none';
+});
