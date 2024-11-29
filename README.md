@@ -6,14 +6,22 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 
 - [Project 1: Mortgage Repayment Calculator](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
 
+- [Project 2: Bento grid](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
 
 ## Projects
 
-### Product List with Cart
+### Mortgage Repayment Calculator
 - **Description**: This project is a calculator to estimate monthly mortgage repayments. Users can input the loan amount, interest rate, and loan term to calculate their monthly payment and view a repayment breakdown.
-- **Technology Stack**: HTML, CSS, JavaScript, Sass
+- **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `mortgage-calculator`
 - **Repository**: [Mortgage Repayment Calculator Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
+
+### Bento Grid
+- **Description**: This project is a responsive grid-based layout showcasing a collection of content cards. It demonstrates the use of modern CSS grid techniques to create flexible and visually appealing designs.
+- **Technology Stack**: HTML, CSS
+- **Branch**: `bento-grid`
+- **Repository**: [Bento grid Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
+
 
 ## Getting Started
 
