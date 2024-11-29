@@ -29,6 +29,16 @@ body {
   color: #333;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .calculator-container {
   display: flex;
   flex-direction: row;
