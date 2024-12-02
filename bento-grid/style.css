@@ -1,0 +1,14 @@
+/* General Reset */
+@font-face {
+  font-family: 'DMSans';
+  src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  font-weight: 100 900;
+  font-style: italic;
+}
