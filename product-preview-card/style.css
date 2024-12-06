@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --bg: hsl(26.25, 40%, 92.16%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(228, 17.24%, 5.69%);
+  --btn: hsl(157.94, 35.79%, 37.25%);
+  --sm-price: hsl(240, 1.05%, 81.37%);
+  --bg-price: hsl(157.38, 28.64%, 41.76%);
+  --gray: hsl(248.57, 4.05%, 66.08%);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+.container {
+  display: flex;
+
+}
