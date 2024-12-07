@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: auto 2rem;
+  }
+
+  .details {
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+  }
+}
