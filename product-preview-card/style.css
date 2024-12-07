@@ -7,7 +7,7 @@
   --btn: hsl(157.94, 35.79%, 37.25%);
   --sm-price: hsl(240, 1.05%, 81.37%);
   --bg-price: hsl(157.38, 28.64%, 41.76%);
-  --gray: hsl(248.57, 4.05%, 66.08%);
+  --gray: hsl(240, 2%, 60%);
 }
 
 
@@ -57,7 +57,7 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 
@@ -80,4 +80,11 @@ body {
   letter-spacing: .5rem;
   text-transform: uppercase;
   font-size: .8rem;
+}
+
+.description {
+  color: var(--gray);
+  font-size: .9rem;
+  line-height: 1.5;
+  font-weight: 500;
 }
