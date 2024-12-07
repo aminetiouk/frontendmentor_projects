@@ -84,9 +84,10 @@ body {
 
 .description {
   color: var(--gray);
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 1.5;
   font-weight: 500;
+  letter-spacing: .02rem;
 }
 
 .price {
@@ -106,4 +107,23 @@ body {
   text-decoration: line-through;
   color: var(--gray);
   font-size: .9rem;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--white);
+  background-color: var(--btn);
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color .2s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: var(--btn-focus);
 }
