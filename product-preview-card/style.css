@@ -1,8 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --bg: hsl(26.25, 40%, 92.16%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(228, 17.24%, 5.69%);
+  --btn: hsl(157.94, 35.79%, 37.25%);
+  --btn-focus: hsl(159, 39%, 26%);
+  --price: hsl(157.38, 28.64%, 41.76%);
+  --gray: hsl(240, 2%, 60%);
+}
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat';
+  background-color: var(--bg);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.responsive-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.responsive-image, .info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+
+.mobile {
+  display: none;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+.header {
+  font-size: 2rem;
+  font-family: 'Fraunces';
+  line-height: 1;
+  font-weight: 700;
+}
+
+.category {
+  color: var(--gray);
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.description {
+  color: var(--gray);
+  font-size: .8rem;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: .02rem;
+}
+
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.price .bg-price {
+  font-size: 2rem;
+  font-family: 'Fraunces';
+  font-weight: 700;
+  color: var(--price);
+}
+
+.price .sm-price {
+  text-decoration: line-through;
+  color: var(--gray);
+  font-size: .9rem;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--white);
+  background-color: var(--btn);
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color .2s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: var(--btn-focus);
+}
