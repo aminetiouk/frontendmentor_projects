@@ -8,6 +8,8 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 
 - [Project 2: Bento grid](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
 
+- [Project 3: Product preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-preview-card)
+
 ## Projects
 
 ### Mortgage Repayment Calculator
@@ -22,6 +24,11 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `bento-grid`
 - **Repository**: [Bento grid Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
 
+### Product preview card
+- **Description**: This project is a responsive product preview card component designed to showcase product details with a visually appealing and user-friendly interface.
+- **Technology Stack**: HTML, CSS
+- **Branch**: `product-preview-card`
+- **Repository**: [Product preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-preview-card)
 
 ## Getting Started
 
@@ -37,12 +44,6 @@ To get a copy of this repo up and running on your local machine, follow these st
    cd frontendmentor_projects
    ```
 
-3. For any specific project, go into its folder and set up:
-   ```bash
-   cd product-list-with-cart-main
-   npm install
-   ```
-
 ## Contributing
 
 If you'd like to contribute to any of the projects or provide suggestions for improvement, feel free to fork this repository and submit a pull request. Make sure to follow the coding standards and write appropriate commit messages.
@@ -50,6 +51,6 @@ If you'd like to contribute to any of the projects or provide suggestions for im
 ## Tools Used
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=css,html,sass,js" />
+    <img src="https://skillicons.dev/icons?i=css,html,js" />
   </a>
 </div>
