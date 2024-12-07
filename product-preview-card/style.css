@@ -5,8 +5,8 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(228, 17.24%, 5.69%);
   --btn: hsl(157.94, 35.79%, 37.25%);
-  --sm-price: hsl(240, 1.05%, 81.37%);
-  --bg-price: hsl(157.38, 28.64%, 41.76%);
+  --btn-focus: hsl(159, 39%, 26%);
+  --price: hsl(157.38, 28.64%, 41.76%);
   --gray: hsl(240, 2%, 60%);
 }
 
@@ -87,4 +87,23 @@ body {
   font-size: .9rem;
   line-height: 1.5;
   font-weight: 500;
+}
+
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.price .bg-price {
+  font-size: 2rem;
+  font-family: 'Fraunces';
+  font-weight: 700;
+  color: var(--price);
+}
+
+.price .sm-price {
+  text-decoration: line-through;
+  color: var(--gray);
+  font-size: .9rem;
 }
