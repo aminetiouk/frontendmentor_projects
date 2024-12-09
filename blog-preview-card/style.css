@@ -17,9 +17,9 @@
 
 :root {
   --yellow: #F4D04E;
-  --gray-950: hsl(0°, 0%, 7%);
-  --gray-500: hsl(0°, 0%, 42%);
-  --white: hsl(0°, 0%, 100%);
+  --gray-950: #111;
+  --gray-500: #6b6b6b;
+  --white: #fff;
 }
 
 * {
@@ -39,3 +39,25 @@ body {
   background-color: var(--yellow);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-container {
+  max-width: 24rem;
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  box-shadow: .6rem .6rem rgba(0, 0, 0, 100%); 
+  padding: 1.5rem;
+  border: var(--gray-950) .0625rem solid;
+}
+
+.card-container .card-image{
+  width: 100%;
+  border-radius: .5rem;  
+}
