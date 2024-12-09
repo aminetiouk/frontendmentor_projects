@@ -56,10 +56,21 @@ body {
   border: var(--gray-950) .0625rem solid;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card-container .card-image{
   width: 100%;
   border-radius: .625rem;  
+}
+
+.category {
+  color: var(--gray-950);
+  background-color: var(--yellow);
+  margin-bottom: .75rem;
+  padding: .25rem .75rem;
+  display: inline-block;
+  border-radius: .25rem;
+  font-size: .875rem;
+  font-weight: 700;
 }
