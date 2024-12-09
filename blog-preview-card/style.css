@@ -1,18 +1,7 @@
-/* figtree-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Figtree';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/figtree-v6-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* figtree-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Figtree';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/figtree-v6-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-weight: 100 900;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf)
 }
 
 :root {
@@ -51,7 +40,7 @@ body {
   max-width: 24rem;
   background-color: var(--white);
   border-radius: 1.25rem;
-  box-shadow: .6rem .6rem rgba(0, 0, 0, 100%); 
+  box-shadow: .5rem .5rem rgba(0, 0, 0, 100%); 
   padding: 1.5rem;
   border: var(--gray-950) .0625rem solid;
   display: flex;
@@ -82,3 +71,9 @@ body {
   margin-bottom: .75rem;
 }
 
+.title {
+  color: var(--gray-950);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
