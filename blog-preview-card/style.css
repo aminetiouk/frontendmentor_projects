@@ -62,6 +62,7 @@ body {
   border-radius: .25rem;
   font-size: .875rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .date-of-publication {
@@ -78,6 +79,11 @@ body {
   margin-bottom: .75rem;
 }
 
+.title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 .description {
   color: var(--gray-500);
   font-size: 1rem;
@@ -88,6 +94,7 @@ body {
   display: flex;
   align-items: center;
   gap: .75rem;
+  cursor: pointer;
 
 }
 
