@@ -45,7 +45,6 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 .card-container {
@@ -55,9 +54,12 @@ body {
   box-shadow: .6rem .6rem rgba(0, 0, 0, 100%); 
   padding: 1.5rem;
   border: var(--gray-950) .0625rem solid;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .card-container .card-image{
   width: 100%;
-  border-radius: .5rem;  
+  border-radius: .625rem;  
 }
