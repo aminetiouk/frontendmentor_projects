@@ -4,11 +4,14 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 
 ## Table of Contents
 
-- [Project 1: Mortgage Repayment Calculator](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
-
-- [Project 2: Bento grid](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
-
-- [Project 3: Product preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-preview-card)
+- [Projects](#projects)
+  - [Mortgage Repayment Calculator](#mortgage-repayment-calculator)
+  - [Bento Grid](#bento-grid)
+  - [Product Preview Card](#product-preview-card)
+  - [Blog Preview Card](#blog-preview-card)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Tools Used](#tools-used)
 
 ## Projects
 
@@ -17,18 +20,28 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `mortgage-calculator`
 - **Repository**: [Mortgage Repayment Calculator Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
+- [Mortgage Repayment Calculator Live Site](https://mortgage-calculator-pi-six.vercel.app/)
 
 ### Bento Grid
 - **Description**: This project is a responsive grid-based layout showcasing a collection of content cards. It demonstrates the use of modern CSS grid techniques to create flexible and visually appealing designs.
 - **Technology Stack**: HTML, CSS
 - **Branch**: `bento-grid`
 - **Repository**: [Bento grid Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/bento-grid)
+- [Bento Grid Live Site](https://bento-grid-lac-nu.vercel.app/)
 
 ### Product preview card
 - **Description**: This project is a responsive product preview card component designed to showcase product details with a visually appealing and user-friendly interface.
 - **Technology Stack**: HTML, CSS
 - **Branch**: `product-preview-card`
 - **Repository**: [Product preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/main/product-preview-card)
+- [Product Preview Card Live Site](https://product-preview-card-five-sigma.vercel.app/)
+
+### Blog preview card
+- **Description**: This project is a responsive blog preview card component designed to showcase blog post details with a visually appealing and user-friendly interface.
+- **Technology Stack**: HTML, CSS
+- **Branch**: `blog-preview-card`
+- **Repository**: [Blog preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/blog-preview-card/blog-preview-card)
+- [Blog Preview Card Live Site](https://blog-preview-card-hazel-mu-36.vercel.app/)
 
 ## Getting Started
 
