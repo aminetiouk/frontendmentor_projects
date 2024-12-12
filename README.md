@@ -43,6 +43,13 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Repository**: [Blog preview card](https://github.com/aminetiouk/frontendmentor_projects/tree/blog-preview-card/blog-preview-card)
 - [Blog Preview Card Live Site](https://blog-preview-card-hazel-mu-36.vercel.app/)
 
+### QR Code Component
+- **Description**: This project is a simple and responsive QR code component that displays a QR code image along with some descriptive text. It is designed to be a beginner-friendly project to practice basic HTML and CSS skills.
+- **Technology Stack**: HTML, CSS
+- **Branch**: `qr-code-component`
+- **Repository**: [QR Code Component](https://github.com/aminetiouk/frontendmentor_projects/tree/qr-code-component/qr-code-component)
+- [QR Code Component Live Site](https://qr-code-component-wheat-seven.vercel.app/)
+
 ## Getting Started
 
 To get a copy of this repo up and running on your local machine, follow these steps:
