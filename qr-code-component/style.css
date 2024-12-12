@@ -84,3 +84,14 @@ body {
   text-align: center;
   letter-spacing: 0.04rem;
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  color: rgb(13, 147, 167);
+}
