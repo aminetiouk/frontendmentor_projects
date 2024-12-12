@@ -9,6 +9,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Bento Grid](#bento-grid)
   - [Product Preview Card](#product-preview-card)
   - [Blog Preview Card](#blog-preview-card)
+  - [QR Code Component](#qr-code-component)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
