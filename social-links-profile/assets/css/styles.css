@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+:root {
+  --button: #333333ff;
+  --lime: #c4f82aff;
+  --bg: #141414ff;
+  --profile: #1f1f1fff;
+  --white: #f4f4f4ff;
+  --1px: 0.0625rem;
+  --2px: 0.125rem;
+  --4px: 0.25rem;
+  --8px: 0.5rem;
+  --10px: 0.625rem;
+  --12px: 0.75rem;
+  --14px: 0.875rem;
+  --16px: 1rem;
+  --20px: 1.25rem;
+  --24px: 1.5rem;
+  --28px: 1.75rem;
+  --32px: 2rem;
+  --48px: 3rem;
+  --64px: 4rem;
+  --96px: 6rem;
+  --320px: 20rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: var(--24px);
+}
+
+.profile-block {
+  background-color: var(--profile);
+  border-radius: var(--8px);
+  width: var(--320px);
+  padding: var(--32px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--20px);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--8px);
+  align-items: center;
+}
+
+.profile img {
+  width: var(--64px);
+  height: var(--64px);
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  margin-bottom: var(--10px);
+}
+
+.profile .profile__name {
+  font-size: var(--20px);
+}
+
+.profile .profile__location {
+  font-size: var(--12px);
+  text-align: center;
+  color: var(--lime);
+}
+
+.profile .profile__bio {
+  font-size: var(--12px);
+  text-align: center;
+  font-weight: 300;
+  margin-top: var(--12px);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--10px);
+}
+
+.link {
+  display: flex;
+  gap: var(--8px);
+  align-items: center;
+  justify-content: center;
+  font-size: var(--12px);
+  font-weight: 600;
+  padding: var(--12px) 0;
+  border-radius: var(--8px);
+  border: none;
+  background-color: var(--button);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: var(--lime);
+  color: var(--bg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--lime);
+}
