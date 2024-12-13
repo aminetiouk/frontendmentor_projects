@@ -10,6 +10,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Product Preview Card](#product-preview-card)
   - [Blog Preview Card](#blog-preview-card)
   - [QR Code Component](#qr-code-component)
+  - [Social Links Profile](#social-links-profile)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -50,6 +51,14 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `qr-code-component`
 - **Repository**: [QR Code Component](https://github.com/aminetiouk/frontendmentor_projects/tree/qr-code-component/qr-code-component)
 - [QR Code Component Live Site](https://qr-code-component-wheat-seven.vercel.app/)
+
+### Social Links Profile
+- **Description**: This project is a responsive social links profile card that displays various social media links in a visually appealing manner. It is designed to help users quickly access and share their social media profiles.
+- **Technology Stack**: HTML, CSS
+- **Branch**: `social-links-profile`
+- **Repository**: [Social Links Profile](https://github.com/aminetiouk/frontendmentor_projects/tree/social-links-profile/social-links-profile)
+- [Social Links Profile Live Site](https://frontendmentor-projects-one.vercel.app/)
+
 
 ## Getting Started
 
