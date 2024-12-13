@@ -21,6 +21,7 @@
   --16px: 1rem;
   --20px: 1.25rem;
   --24px: 1.5rem;
+  --28px: 1.75rem;
   --32px: 2rem;
   --48px: 3rem;
   --64px: 4rem;
@@ -49,11 +50,11 @@ body {
 .profile-block {
   background-color: var(--profile);
   border-radius: var(--8px);
-  max-width: var(--320px);
-  padding: var(--24px);
+  width: var(--320px);
+  padding: var(--32px);
   display: flex;
   flex-direction: column;
-  gap: var(--16px);
+  gap: var(--20px);
 }
 
 .profile {
@@ -67,8 +68,9 @@ body {
   width: var(--64px);
   height: var(--64px);
   border-radius: 50%;
-  border: var(--1px) solid var(--lime);
   display: inline-block;
+  object-fit: cover;
+  margin-bottom: var(--10px);
 }
 
 .profile .profile__name {
@@ -82,11 +84,30 @@ body {
 }
 
 .profile .profile__bio {
-  font-size: var(--14px);
+  font-size: var(--12px);
   text-align: center;
   font-weight: 300;
   margin-top: var(--12px);
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--10px);
+}
+
+.link {
+  display: flex;
+  gap: var(--8px);
+  align-items: center;
+  justify-content: center;
+  padding: var(--12px) 0;
+  border-radius: var(--8px);
+  border: none;
+  background-color: var(--button);
+  color: var(--white);
+}
+
 
 .attribution {
   font-size: 11px;
