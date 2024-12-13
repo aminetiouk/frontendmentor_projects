@@ -15,11 +15,16 @@
   --2px: 0.125rem;
   --4px: 0.25rem;
   --8px: 0.5rem;
+  --10px: 0.625rem;
   --12px: 0.75rem;
+  --14px: 0.875rem;
   --16px: 1rem;
+  --20px: 1.25rem;
   --24px: 1.5rem;
   --32px: 2rem;
   --48px: 3rem;
+  --64px: 4rem;
+  --96px: 6rem;
   --320px: 20rem;
 }
 
@@ -39,6 +44,48 @@ body {
   align-items: center;
   height: 100vh;
   gap: var(--24px);
+}
+
+.profile-block {
+  background-color: var(--profile);
+  border-radius: var(--8px);
+  max-width: var(--320px);
+  padding: var(--24px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--16px);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--8px);
+  align-items: center;
+}
+
+.profile img {
+  width: var(--64px);
+  height: var(--64px);
+  border-radius: 50%;
+  border: var(--1px) solid var(--lime);
+  display: inline-block;
+}
+
+.profile .profile__name {
+  font-size: var(--20px);
+}
+
+.profile .profile__location {
+  font-size: var(--12px);
+  text-align: center;
+  color: var(--lime);
+}
+
+.profile .profile__bio {
+  font-size: var(--14px);
+  text-align: center;
+  font-weight: 300;
+  margin-top: var(--12px);
 }
 
 .attribution {
