@@ -101,18 +101,25 @@ body {
   gap: var(--8px);
   align-items: center;
   justify-content: center;
+  font-size: var(--12px);
+  font-weight: 600;
   padding: var(--12px) 0;
   border-radius: var(--8px);
   border: none;
   background-color: var(--button);
   color: var(--white);
+  cursor: pointer;
 }
 
+.link:hover {
+  background-color: var(--lime);
+  color: var(--bg);
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--lime);
 }
