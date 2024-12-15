@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(../fonts/Karla-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url(../fonts/Karla-Italic-VariableFont_wght.ttf) format('truetype');
+}
+
+:root {
+  --bg: #e0f2e7;
+  --main: #0b7d69;
+  --focus-active: #2a4243;
+  --accent: #669182;
+  --text: #002321;
+  --text-light: #a1a8a8;
+  --white: #fff;
+  --shadow: 0 0 var(--10px) rgba(0, 0, 0, 0.1);
+  --1px: 0.0625rem;
+  --2px: 0.125rem;
+  --4px: 0.25rem;
+  --8px: 0.5rem;
+  --10px: 0.625rem;
+  --12px: 0.75rem;
+  --14px: 0.875rem;
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --32px: 2rem;
+  --48px: 3rem;
+  --64px: 4rem;
+  --80px: 5rem;
+  --96px: 6rem;
+  --320px: 20rem;
+  --640px: 40rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: var(--24px);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
