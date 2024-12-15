@@ -65,6 +65,21 @@ body {
   width: var(--640px);
 }
 
+.name-fields {
+  display: flex;
+  gap: var(--16px);
+}
+
+.name-fields .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--8px);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
