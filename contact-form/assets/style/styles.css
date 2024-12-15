@@ -132,6 +132,11 @@ h1 {
   background-color: var(--accent);
 }
 
+.radio-group:hover {
+  background-color: var(--accent);
+  transition: background-color 0.3s;
+}
+
 .form-query-type input[type='radio'] {
   appearance: none;
   width: var(--24px);
