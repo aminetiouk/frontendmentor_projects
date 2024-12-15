@@ -15,7 +15,7 @@
 :root {
   --bg: #e0f2e7;
   --main: #0b7d69;
-  --focus-active: #2a4243;
+  --focus-active: #106958;
   --accent: #cdf0e4;
   --text: #6f7372;
   --text-light: #548a7b;
@@ -31,6 +31,7 @@
   --12px: 0.75rem;
   --14px: 0.875rem;
   --16px: 1rem;
+  --18px: 1.125rem;
   --24px: 1.5rem;
   --28px: 1.75rem;
   --32px: 2rem;
@@ -218,6 +219,22 @@ h1 {
 .consent input[type='checkbox']:checked:after {
   display: block;
   color: var(--white);
+}
+
+button {
+  padding: var(--14px) var(--24px);
+  border: none;
+  border-radius: var(--8px);
+  background-color: var(--main);
+  color: var(--white);
+  font-size: var(--18px);
+  letter-spacing: var(--1px);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--focus-active);
 }
 
 .attribution {
