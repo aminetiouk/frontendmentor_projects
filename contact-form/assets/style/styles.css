@@ -65,6 +65,27 @@ body {
   width: var(--640px);
 }
 
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--16px);
+}
+
+.query-type {
+  display: flex;
+  flex-direction: column;
+  gap: var(--16px);
+}
+.from-query-type {
+  display: flex;
+  gap: var(--16px);
+}
+
+.from-query-type > div {
+  flex: 1;
+}
+
+
 .name-fields {
   display: flex;
   gap: var(--16px);
