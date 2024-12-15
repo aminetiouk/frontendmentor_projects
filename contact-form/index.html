@@ -3,59 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./assets/style/styles.css">
     <title>Frontend Mentor | Contact form</title>
 
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <!-- contact form -->
     <div class="contact-container">
-      <h1>Contact Us</h1>
       <form id="contact-form">
-        <div class="form-group">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name" required />
+        <h1>Contact Us</h1>
+        <div class="name-fields">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
         </div>
         <div class="form-group">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
+          <label for="email">Email Address *</label>
           <input type="email" id="email" name="email" required />
         </div>
-        <div class="form-group">
-          <label for="query-type">Query Type</label>
-          <select id="query-type" name="query-type" required>
-            <option value="">Select an option</option>
-            <option value="general">General Enquiry</option>
-            <option value="support">Support Request</option>
-          </select>
+        <div class="query-type">
+          <label>Query Type *</label>
+          <div class="form-query-type">
+            <label class="radio-group">
+              <input
+                class="radio"
+                type="radio"
+                id="general"
+                name="query-type"
+                value="general"
+                required
+              />
+              <span for="general">General Enquiry</span>
+            </label>
+            <label class="radio-group">
+              <input
+                class="radio"
+                type="radio"
+                id="support"
+                name="query-type"
+                value="support"
+                required
+              />
+              <span for="support">Support Request</span>
+            </label>
+          </div>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
+          <label for="message">Message *</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <div class="form-group">
+        <div class="consent">
           <input type="checkbox" id="consent" name="consent" required />
-          <label for="consent">I consent to being contacted by the team</label>
+          <label for="consent">I consent to being contacted by the team *</label>
         </div>
         <button type="submit">Submit</button>
       </form>
