@@ -18,7 +18,8 @@
   --focus-active: #2a4243;
   --accent: #cdf0e4;
   --text: #6f7372;
-  --text-light: #a1a8a8;
+  --text-light: #548a7b;
+  --text-hover: #c7c7c7;
   --white: #fff;
   --black: #232222;
   --shadow: 0 0 var(--10px) rgba(0, 0, 0, 0.1);
@@ -38,6 +39,7 @@
   --64px: 4rem;
   --80px: 5rem;
   --96px: 6rem;
+  --128px: 8rem;
   --320px: 20rem;
   --640px: 40rem;
 }
@@ -129,7 +131,7 @@ h1 {
   background-color: var(--accent);
 }
 
-.form-query-type input[type="radio"] {
+.form-query-type input[type='radio'] {
   appearance: none;
   width: var(--24px);
   height: var(--24px);
@@ -139,7 +141,7 @@ h1 {
   cursor: pointer;
 }
 
-.form-query-type input[type="radio"]:checked::before {
+.form-query-type input[type='radio']:checked::before {
   content: '';
   width: var(--14px);
   height: var(--14px);
@@ -157,12 +159,65 @@ h1 {
   border: var(--1px) solid var(--text-light);
   border-radius: var(--8px);
   font-size: var(--16px);
-  min-height: var(--96px);
+  min-height: var(--128px);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: var(--main);
+}
+
+.consent {
+  display: flex;
+  gap: var(--16px);
+  align-items: center;
+  cursor: pointer;
+}
+.consent label {
+  color: var(--text);
+  cursor: pointer;
+}
+
+.consent input[type='checkbox'] {
+  appearance: none;
+  --webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--24px);
+  height: var(--24px);
+  border: var(--1px) solid var(--text-light);
+  border-radius: var(--2px);
+  position: relative;
+  padding: var(--10px);
+  cursor: pointer;
+}
+
+.consent input[type='checkbox']:after {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: var(--16px);
+  color: var(--main);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.consent input[type='checkbox']:hover {
+  background-color: var(--accent);
+}
+
+.consent input[type='checkbox']:checked{
+  background-color: var(--main);
+}
+
+.consent input[type='checkbox']:checked:after {
+  display: block;
+  color: var(--white);
 }
 
 .attribution {
