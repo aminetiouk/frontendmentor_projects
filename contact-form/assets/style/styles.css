@@ -57,6 +57,13 @@ body {
   gap: var(--24px);
 }
 
+.contact-container {
+  background-color: var(--white);
+  border-radius: var(--14px);
+  box-shadow: var(--shadow);
+  padding: var(--24px);
+  width: var(--640px);
+}
 
 .attribution {
   font-size: 11px;
