@@ -16,7 +16,7 @@
   --bg: #e0f2e7;
   --main: #0b7d69;
   --focus-active: #2a4243;
-  --accent: #669182;
+  --accent: #cdf0e4;
   --text: #6f7372;
   --text-light: #a1a8a8;
   --white: #fff;
@@ -62,6 +62,7 @@ body {
 
 .contact-container {
   background-color: var(--white);
+  color: var(--black);
   border-radius: var(--14px);
   box-shadow: var(--shadow);
   padding: var(--38px);
@@ -106,20 +107,26 @@ h1 {
   flex-direction: column;
   gap: var(--16px);
 }
+
 .form-query-type {
   display: flex;
   gap: var(--16px);
 }
 
-.form-query-type > div {
+.form-query-type .radio-group {
   flex: 1;
   display: flex;
-  gap: var(--8px);
+  gap: var(--14px);
   align-items: center;
   color: var(--text);
   border: var(--1px) solid var(--text-light);
   border-radius: var(--8px);
   padding: var(--14px);
+  cursor: pointer;
+}
+
+.radio-group:has(.radio:checked) {
+  background-color: var(--accent);
 }
 
 .form-query-type input[type="radio"] {
@@ -142,6 +149,20 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.form-group textarea {
+  resize: none;
+  padding: var(--14px);
+  border: var(--1px) solid var(--text-light);
+  border-radius: var(--8px);
+  font-size: var(--16px);
+  min-height: var(--96px);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--main);
 }
 
 .attribution {
