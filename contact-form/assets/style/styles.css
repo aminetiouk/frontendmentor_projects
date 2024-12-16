@@ -213,6 +213,7 @@ h1 {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--main);
+  cursor: text;
 }
 
 .form-group textarea:hover {
