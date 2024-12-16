@@ -112,6 +112,11 @@ h1 {
   cursor: pointer;
 }
 
+.form-group input[type='email']:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
+}
+
 .query-type {
   display: flex;
   flex-direction: column;
@@ -158,6 +163,8 @@ h1 {
 
 .form-query-type input[type='radio']:hover {
   border-color: var(--main);
+  transition: border-color 0.3s;
+  background-color: var(--white);
 }
 
 .form-query-type input[type='radio']:checked::before {
@@ -180,12 +187,18 @@ h1 {
   border-radius: var(--8px);
   font-size: var(--16px);
   min-height: var(--128px);
+  cursor: pointer;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--main);
+}
+
+.form-group textarea:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
 }
 
 .consent {
