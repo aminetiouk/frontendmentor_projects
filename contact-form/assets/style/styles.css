@@ -22,6 +22,7 @@
   --text-hover: #c7c7c7;
   --white: #fff;
   --black: #232222;
+  --grey: #bcbcbc;
   --shadow: 0 0 var(--10px) rgba(0, 0, 0, 0.1);
   --1px: 0.0625rem;
   --2px: 0.125rem;
@@ -92,6 +93,11 @@ h1 {
   flex: 1;
 }
 
+.name-fields input[type='text']:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -100,9 +106,15 @@ h1 {
 
 .form-group input {
   padding: var(--14px);
-  border: var(--1px) solid var(--text-light);
+  border: var(--1px) solid var(--grey);
   border-radius: var(--8px);
   font-size: var(--16px);
+  cursor: pointer;
+}
+
+.form-group input[type='email']:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
 }
 
 .query-type {
@@ -122,7 +134,7 @@ h1 {
   gap: var(--14px);
   align-items: center;
   color: var(--text);
-  border: var(--1px) solid var(--text-light);
+  border: var(--1px) solid var(--grey);
   border-radius: var(--8px);
   padding: var(--14px);
   cursor: pointer;
@@ -130,21 +142,29 @@ h1 {
 
 .radio-group:has(.radio:checked) {
   background-color: var(--accent);
+  border-color: var(--main);
 }
 
 .radio-group:hover {
   background-color: var(--accent);
   transition: background-color 0.3s;
+  border-color: var(--main);
 }
 
 .form-query-type input[type='radio'] {
   appearance: none;
   width: var(--24px);
   height: var(--24px);
-  border: var(--1px) solid var(--text-light);
+  border: var(--1px) solid var(--grey);
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+}
+
+.form-query-type input[type='radio']:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
+  background-color: var(--white);
 }
 
 .form-query-type input[type='radio']:checked::before {
@@ -152,6 +172,7 @@ h1 {
   width: var(--14px);
   height: var(--14px);
   border-radius: 50%;
+  border-color: var(--main);
   background-color: var(--main);
   position: absolute;
   top: 50%;
@@ -162,16 +183,22 @@ h1 {
 .form-group textarea {
   resize: none;
   padding: var(--14px);
-  border: var(--1px) solid var(--text-light);
+  border: var(--1px) solid var(--grey);
   border-radius: var(--8px);
   font-size: var(--16px);
   min-height: var(--128px);
+  cursor: pointer;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--main);
+}
+
+.form-group textarea:hover {
+  border-color: var(--main);
+  transition: border-color 0.3s;
 }
 
 .consent {
