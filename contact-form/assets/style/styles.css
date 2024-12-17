@@ -43,6 +43,7 @@
   --96px: 6rem;
   --128px: 8rem;
   --320px: 20rem;
+  --480px: 30rem;
   --640px: 40rem;
 }
 
@@ -60,7 +61,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   gap: var(--32px);
 }
 
