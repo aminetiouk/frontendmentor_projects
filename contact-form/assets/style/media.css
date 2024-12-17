@@ -2,27 +2,31 @@
 
 @media (max-width: 768px) {
 
-  body {
-    min-height: 100vh;
-  }
-
   .contact-container {
     width: 90%;
     padding: var(--18px);
     max-width: var(--320px);
+    height: 850px;
+  }
 
+  #contact-form {
+    gap: var(--18px);
   }
 
   .name-fields {
     flex-direction: column;
+    gap: var(--10px);
   }
 
   .form-query-type {
     flex-direction: column;
   }
 
+  .form-group label, .query-type label {
+    font-size: var(--14px);
+  }
+
   .form-group textarea {
-    min-height: 10rem;
-    max-height: 16rem;
+    min-height: 9rem;
   }
 }
