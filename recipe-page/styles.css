@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
