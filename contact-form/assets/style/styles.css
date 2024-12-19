@@ -70,19 +70,31 @@ body {
   color: var(--black);
   border-radius: var(--14px);
   box-shadow: var(--shadow);
-  padding: var(--38px);
+  padding: var(--28px);
   width: var(--640px);
+  height: 850px;
+}
+
+span {
+  color: var(--main);
+}
+
+.error-message {
+  color: rgb(195, 74, 74);
+  font-size: var(--14px);
+  margin-bottom: var(--16px);
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--32px);
+  gap: var(--16px);
 }
 
 h1 {
   font-size: var(--28px);
   color: var(--black);
+  margin-bottom: var(--16px);
 }
 
 .name-fields {
@@ -102,7 +114,12 @@ h1 {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: var(--16px);
+  gap: var(--12px);
+}
+
+.form-group label {
+  color: var(--text);
+  font-size: var(--14px);
 }
 
 .form-group input {
@@ -121,7 +138,12 @@ h1 {
 .query-type {
   display: flex;
   flex-direction: column;
-  gap: var(--16px);
+  gap: var(--12px);
+}
+
+.query-type > label {
+  color: var(--text);
+  font-size: var(--14px);
 }
 
 .form-query-type {
@@ -206,7 +228,7 @@ h1 {
   border: var(--1px) solid var(--grey);
   border-radius: var(--8px);
   font-size: var(--16px);
-  min-height: var(--128px);
+  min-height: var(--96px);
   cursor: pointer;
 }
 

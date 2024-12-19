@@ -27,20 +27,23 @@
         <h1>Contact Us</h1>
         <div class="name-fields">
           <div class="form-group">
-            <label for="first-name">First Name *</label>
-            <input type="text" id="first-name" name="first-name" required />
+            <label for="first-name">First Name <span>*</span></label>
+            <input type="text" id="first-name" name="first-name"/>
+            <p class="error-message">This field is required</p>
           </div>
           <div class="form-group">
-            <label for="last-name">Last Name *</label>
-            <input type="text" id="last-name" name="last-name" required />
+            <label for="last-name">Last Name <span>*</span></label>
+            <input type="text" id="last-name" name="last-name"/>
+            <p class="error-message">This field is required</p>
           </div>
         </div>
         <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required />
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" name="email"/>
+          <p class="error-message">Please enter a valid email address</p>
         </div>
         <div class="query-type">
-          <label>Query Type *</label>
+          <label>Query Type <span>*</span></label>
           <div class="form-query-type">
             <label class="radio-group">
               <input
@@ -49,9 +52,8 @@
                 id="general"
                 name="query-type"
                 value="general"
-                required
               />
-              <span for="general">General Enquiry</span>
+              <p for="general">General Enquiry</p>
             </label>
             <label class="radio-group">
               <input
@@ -60,19 +62,23 @@
                 id="support"
                 name="query-type"
                 value="support"
-                required
               />
-              <span for="support">Support Request</span>
+              <p for="support">Support Request</p>
             </label>
           </div>
+          <p class="error-message">Please select a query type</p>
         </div>
         <div class="form-group">
-          <label for="message">Message *</label>
+          <label for="message">Message <span>*</span></label>
           <textarea id="message" name="message" required></textarea>
+          <p class="error-message">This field is required</p>
         </div>
-        <div class="consent">
-          <input type="checkbox" id="consent" name="consent" required />
-          <label for="consent">I consent to being contacted by the team *</label>
+        <div class="form-group">
+          <div class="consent">
+            <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">I consent to being contacted by the team <span>*</span></label>
+          </div>
+          <p class="error-message">To submit this form, please consent to being contacted</p>
         </div>
         <button type="submit">Submit</button>
       </form>
