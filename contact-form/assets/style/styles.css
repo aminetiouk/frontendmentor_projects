@@ -74,6 +74,16 @@ body {
   width: var(--640px);
 }
 
+span {
+  color: var(--main);
+}
+
+.error-message {
+  color: rgb(195, 74, 74);
+  font-size: var(--14px);
+  margin-top: var(--4px);
+}
+
 #contact-form {
   display: flex;
   flex-direction: column;
