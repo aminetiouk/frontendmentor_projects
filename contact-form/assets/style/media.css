@@ -3,14 +3,13 @@
 @media (max-width: 768px) {
 
   .contact-container {
-    width: 90%;
     padding: var(--18px);
-    max-width: var(--320px);
-    height: 850px;
+    width: var(--320px);
+    height: 100%;
   }
 
   #contact-form {
-    gap: var(--18px);
+    gap: var(--12px);
   }
 
   .name-fields {
@@ -28,5 +27,10 @@
 
   .form-group textarea {
     min-height: 9rem;
+  }
+
+  .error-message {
+    font-size: var(--12px);
+    margin-bottom: var(--10px);
   }
 }
