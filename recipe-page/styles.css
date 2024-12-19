@@ -72,3 +72,12 @@ body {
   flex-direction: column;
   gap: var(--sm-text);
 }
+
+.attribution {
+  font-size: var(--sm-text);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--primary);
+}
