@@ -31,13 +31,11 @@ h1, h3 {
   --primary: #814833;
   --secondary: #884964;
   --tertiary: #fff7fb;
-  --black: #000;
+  --black: #343a40;
   --white: #fff;
-  --sm-text: 1rem;
+  --sm-text: .9rem;
   --md-text: 1.5rem;
   --lg-text: 2rem;
-
-
 }
 
 img {
@@ -46,8 +44,8 @@ img {
   vertical-align: middle;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: var(--sm-text);
-  margin-bottom: var(--sm-text);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 body {
@@ -64,15 +62,54 @@ body {
 }
 
 .recipe-container {
-  max-width: 750px;
-  padding: 1.5rem;
+  max-width: 650px;
+  padding: 2rem;
   background: var(--white);
-  border-radius: var(--sm-text);
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: var(--sm-text);
+  gap: 1rem;
 }
 
+.title h1 {
+  font-size: var(--lg-text);
+  margin-bottom: 1rem;
+}
+
+.title p {
+  font-size: var(--sm-text);
+  font-weight: 300;
+  margin-bottom: var(--sm-text);
+}
+
+.preparation-time {
+  font-size: var(--sm-text);
+  font-weight: 300;
+  background-color: var(--tertiary);
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  line-height: 2;
+}
+
+.preparation-time h3 {
+  font-family: 'outfit';
+  font-size: var(--md-text);
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+.preparation-time ul {
+  padding-left: 1rem;
+}
+
+.preparation-time li {
+  padding-left: 1rem;
+}
+
+.preparation-time li strong {
+  margin-right: .6rem;
+}
 .attribution {
   font-size: var(--sm-text);
   text-align: center;
