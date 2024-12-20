@@ -82,6 +82,34 @@ body {
   margin-bottom: var(--sm-text);
 }
 
+.preparation-time {
+  font-size: var(--sm-text);
+  font-weight: 300;
+  background-color: var(--tertiary);
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  line-height: 2;
+}
+
+.preparation-time h3 {
+  font-family: 'outfit';
+  font-size: var(--md-text);
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+.preparation-time ul {
+  padding-left: 1rem;
+}
+
+.preparation-time li {
+  padding-left: 1rem;
+}
+
+.preparation-time li strong {
+  margin-right: .6rem;
+}
 .attribution {
   font-size: var(--sm-text);
   text-align: center;
