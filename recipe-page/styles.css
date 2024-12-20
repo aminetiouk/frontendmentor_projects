@@ -45,7 +45,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1rem;
-  margin-bottom: 1rem;
 }
 
 body {
@@ -68,18 +67,22 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .title h1 {
   font-size: var(--lg-text);
-  margin-bottom: 1rem;
 }
 
 .title p {
   font-size: var(--sm-text);
   font-weight: 300;
-  margin-bottom: var(--sm-text);
 }
 
 .preparation-time {
@@ -100,7 +103,7 @@ body {
 }
 
 .preparation-time ul {
-  padding-left: 1rem;
+  list-style-position: inside;
 }
 
 .preparation-time li {
@@ -108,8 +111,42 @@ body {
 }
 
 .preparation-time li strong {
-  margin-right: .6rem;
+  margin: 0 .5rem 0 1rem
 }
+
+.ingredients {
+  list-style-position: inside;
+  border-bottom: #c9cacb 1px solid;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ingredients h3 {
+  font-family: 'youngSerif';
+  font-size: var(--md-text);
+  font-weight: 400;
+  color: var(--secondary);
+  letter-spacing: .05rem;
+}
+
+.ingredients ul {
+  font-size: var(--sm-text);
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients ul li span {
+  margin-left: 1rem;
+}
+
+.ingredients ul li::marker {
+  color: var(--secondary);
+}
+
+
 .attribution {
   font-size: var(--sm-text);
   text-align: center;
