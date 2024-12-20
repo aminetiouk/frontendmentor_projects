@@ -146,6 +146,42 @@ body {
   color: var(--secondary);
 }
 
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: #c9cacb 1px solid;
+  padding-bottom: 2rem;
+  list-style-position: inside;
+  line-height: 2;
+}
+
+.instructions h3 {
+  font-family: 'youngSerif';
+  font-size: var(--md-text);
+  font-weight: 400;
+  color: var(--secondary);
+  letter-spacing: .05rem;
+}
+
+.instructions ol {
+  margin-left: 2rem;
+  font-size: var(--sm-text);
+}
+
+.instructions ol li {
+  text-indent: -2rem;
+}
+
+.instructions ol li strong {
+  margin-left: 1rem;
+}
+
+.instructions ol li::marker {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
 
 .attribution {
   font-size: var(--sm-text);
