@@ -11,6 +11,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Blog Preview Card](#blog-preview-card)
   - [QR Code Component](#qr-code-component)
   - [Social Links Profile](#social-links-profile)
+  - [Recipe Page](#recipe-page)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -59,6 +60,13 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Repository**: [Social Links Profile](https://github.com/aminetiouk/frontendmentor_projects/tree/social-links-profile/social-links-profile)
 - [Social Links Profile Live Site](https://frontendmentor-projects-one.vercel.app/)
 
+### Recipe Page
+- **Description**: This project is a responsive recipe page that displays a list of recipes with their ingredients and cooking instructions. It is designed to provide a clean and user-friendly interface for browsing and viewing recipes.
+- **Technology Stack**: HTML, CSS, JavaScript
+- **Branch**: `recipe-page`
+- **Repository**: [Recipe Page](https://github.com/aminetiouk/frontendmentor_projects/tree/recipe-page)
+- [Recipe Page Live Site](https://recipe-page-indol-beta.vercel.app/)
+
 
 ## Getting Started
 
@@ -66,7 +74,7 @@ To get a copy of this repo up and running on your local machine, follow these st
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/frontendmentor_projects.git
+   git clone https://github.com/aminetiouk/frontendmentor_projects.git
    ```
 
 2. Navigate to the project directory:
