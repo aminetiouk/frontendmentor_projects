@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
+- [Preview](#preview)
 - [Overview](#overview)
 - [Features](#features)
 - [Usage](#usage)
+
+## Preview
+
+![Recipe Page Preview](./preview.jpg)
 
 ## Overview
 
