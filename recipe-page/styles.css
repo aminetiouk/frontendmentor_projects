@@ -136,10 +136,11 @@ body {
   line-height: 2;
   display: flex;
   flex-direction: column;
+  margin-left: 2rem;
 }
 
-.ingredients ul li span {
-  margin-left: 1rem;
+.ingredients ul li {
+  text-indent: -2rem;
 }
 
 .ingredients ul li::marker {
@@ -230,4 +231,65 @@ body {
 
 .attribution a {
   color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .recipe-container {
+    padding: 1rem;
+    max-width: 320px;
+  }
+  .title {
+    gap: 1rem;
+  }
+  .title h1 {
+    font-size: 1.5rem;
+  }
+  .title p {
+    font-size: .8rem;
+  }
+
+  .preparation-time {
+    font-size: .8rem;
+    padding: .5rem;
+    padding-left: 1rem;
+  }
+
+  .preparation-time li strong {
+    margin: 0 .5rem;
+  }
+  .preparation-time h3 {
+    font-size: 1rem;
+  }
+  .ingredients h3 {
+    font-size: 1.5rem;
+  }
+  .ingredients ul {
+    font-size: .8rem;
+  }
+
+  .ingredients ul li span {
+    margin-left: .5rem;
+  }
+
+  .instructions h3 {
+    font-size: 1.5rem;
+  }
+  .instructions ol {
+    font-size: .8rem;
+  }
+  .nutrition h3 {
+    font-size: 1.5rem;
+  }
+  .nutrition p {
+    font-size: .8rem;
+  }
+  .nutrition th {
+    font-size: .8rem;
+  }
+  .nutrition td {
+    font-size: .8rem;
+  }
+  .attribution {
+    font-size: .8rem;
+  }
 }
