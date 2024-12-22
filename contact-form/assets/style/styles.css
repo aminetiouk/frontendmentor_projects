@@ -42,6 +42,7 @@
   --80px: 5rem;
   --96px: 6rem;
   --128px: 8rem;
+  --160px: 10rem;
   --320px: 20rem;
   --480px: 30rem;
   --640px: 40rem;
@@ -72,7 +73,7 @@ body {
   box-shadow: var(--shadow);
   padding: var(--28px);
   width: var(--640px);
-  height: 850px;
+  height: auto;
 }
 
 span {
@@ -83,6 +84,7 @@ span {
   color: rgb(195, 74, 74);
   font-size: var(--14px);
   margin-bottom: var(--16px);
+  display: none;
 }
 
 #contact-form {
@@ -228,7 +230,7 @@ h1 {
   border: var(--1px) solid var(--grey);
   border-radius: var(--8px);
   font-size: var(--16px);
-  min-height: var(--96px);
+  min-height: var(--160px);
   cursor: pointer;
 }
 
