@@ -65,7 +65,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `recipe-page`
 - **Repository**: [Recipe Page](https://github.com/aminetiouk/frontendmentor_projects/tree/recipe-page)
-- [Recipe Page Live Site](https://recipe-page-indol-beta.vercel.app/)
+- [Recipe Page Live Site](https://recipe-page-phi-ashy.vercel.app/)
 
 
 ## Getting Started
