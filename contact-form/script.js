@@ -20,6 +20,12 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#first-name + .error-message').style.display = 'none';
     firstNameInput.style.borderColor = '';
   }
+  
+  firstNameInput.addEventListener('focus', () => {
+    document.querySelector('#first-name + .error-message').style.display = 'none';
+    firstNameInput.style.borderColor = '';
+  });
+  
   firstNameInput.addEventListener('input', () => {
     if (firstNameInput.value.trim() !== '') {
       document.querySelector('#first-name + .error-message').style.display = 'none';
