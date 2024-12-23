@@ -2,22 +2,21 @@ const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  const firstName = document.getElementById('first-name');
   
-  if (firstName.value === '') {
+  const firstNameInput = document.getElementById('first-name');
+  const firstName = firstNameInput.value.trim();
+  
+  if (firstName === '') {
     document.querySelector('.error-message').style.display = 'block';
-    firstName.style.borderColor = 'red';
+    firstNameInput.style.borderColor = 'red';
   } else {
     document.querySelector('.error-message').style.display = 'none';
-    firstName.style.borderColor = '';
+    firstNameInput.style.borderColor = '';
   }
-  
-  firstName.addEventListener('input', () => {
-    if (firstName.value !== '') {
+  firstNameInput.addEventListener('input', () => {
+    if (firstNameInput.value.trim() !== '') {
       document.querySelector('.error-message').style.display = 'none';
-      firstName.style.borderColor = '';
+      firstNameInput.style.borderColor = ''; 
     }
   });
 });
-
