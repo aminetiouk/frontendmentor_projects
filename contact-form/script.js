@@ -20,6 +20,12 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#first-name + .error-message').style.display = 'none';
     firstNameInput.style.borderColor = '';
   }
+  
+  firstNameInput.addEventListener('focus', () => {
+    document.querySelector('#first-name + .error-message').style.display = 'none';
+    firstNameInput.style.borderColor = '';
+  });
+
   firstNameInput.addEventListener('input', () => {
     if (firstNameInput.value.trim() !== '') {
       document.querySelector('#first-name + .error-message').style.display = 'none';
@@ -35,6 +41,12 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#last-name + .error-message').style.display = 'none';
     lastNameInput.style.borderColor = '';
   }
+
+  lastNameInput.addEventListener('focus', () => {
+    document.querySelector('#last-name + .error-message').style.display = 'none';
+    lastNameInput.style.borderColor = '';
+  });
+
   lastNameInput.addEventListener('input', () => {
     if (lastNameInput.value.trim() !== '') {
       document.querySelector('#last-name + .error-message').style.display = 'none';
@@ -50,6 +62,12 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#email + .error-message').style.display = 'none';
     emailInput.style.borderColor = '';
   }
+
+  emailInput.addEventListener('focus', () => {
+    document.querySelector('#email + .error-message').style.display = 'none';
+    emailInput.style.borderColor = '';
+  });
+
   emailInput.addEventListener('input', () => {
     if (emailInput.value.trim() !== '') {
       document.querySelector('#email + .error-message').style.display = 'none';
