@@ -3,10 +3,16 @@ const form = document.getElementById('contact-form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  /* first name validation */
   const firstNameInput = document.getElementById('first-name');
   const firstName = firstNameInput.value.trim();
   
+  const lastNameInput = document.getElementById('last-name');
+  const lastName = lastNameInput.value.trim();
+
+  const emailInput = document.getElementById('email');
+  const email = emailInput.value.trim();
+  
+  /* first name validation */
   if (firstName === '') {
     document.querySelector('#first-name + .error-message').style.display = 'block';
     firstNameInput.style.borderColor = 'red';
@@ -22,9 +28,6 @@ form.addEventListener('submit', (e) => {
   });
 
   /* last name validation */
-  const lastNameInput = document.getElementById('last-name');
-  const lastName = lastNameInput.value.trim();
-
   if (lastName === '') {
     document.querySelector('#last-name + .error-message').style.display = 'block';
     lastNameInput.style.borderColor = 'red';
@@ -36,6 +39,21 @@ form.addEventListener('submit', (e) => {
     if (lastNameInput.value.trim() !== '') {
       document.querySelector('#last-name + .error-message').style.display = 'none';
       lastNameInput.style.borderColor = ''; 
+    }
+  });
+
+  /* email validation */
+  if (email === '') {
+    document.querySelector('#email + .error-message').style.display = 'block';
+    emailInput.style.borderColor = 'red';
+  } else {
+    document.querySelector('#email + .error-message').style.display = 'none';
+    emailInput.style.borderColor = '';
+  }
+  emailInput.addEventListener('input', () => {
+    if (emailInput.value.trim() !== '') {
+      document.querySelector('#email + .error-message').style.display = 'none';
+      emailInput.style.borderColor = ''; 
     }
   });
 });
