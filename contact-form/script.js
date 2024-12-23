@@ -62,6 +62,12 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#email + .error-message').style.display = 'none';
     emailInput.style.borderColor = '';
   }
+
+  emailInput.addEventListener('focus', () => {
+    document.querySelector('#email + .error-message').style.display = 'none';
+    emailInput.style.borderColor = '';
+  });
+
   emailInput.addEventListener('input', () => {
     if (emailInput.value.trim() !== '') {
       document.querySelector('#email + .error-message').style.display = 'none';
