@@ -33,4 +33,20 @@
     font-size: var(--12px);
     margin-bottom: var(--10px);
   }
+
+  .success-state {
+    width: 90%;
+    top: 2%;
+  }
+
+  @keyframes slideDown {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 2%;
+      opacity: 1;
+    }
+  }
 }

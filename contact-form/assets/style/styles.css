@@ -33,6 +33,7 @@
   --14px: 0.875rem;
   --16px: 1rem;
   --18px: 1.125rem;
+  --20px: 1.25rem;
   --24px: 1.5rem;
   --28px: 1.75rem;
   --32px: 2rem;
@@ -217,7 +218,6 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-
 .form-query-type input[type='radio']:checked {
   background-color: var(--white);
   border-color: var(--main);
@@ -324,7 +324,7 @@ button:hover {
   border-radius: var(--8px);
   pointer-events: none;
   opacity: 0;
-  top: -100px;
+  top: 9%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -353,7 +353,6 @@ button:hover {
     opacity: 0;
   }
 }
-
 
 .success-state .success-state-header {
   color: var(--white);
