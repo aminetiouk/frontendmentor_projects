@@ -16,6 +16,8 @@ form.addEventListener('submit', (e) => {
 
   const messageInput = document.getElementById('message');
   const message = messageInput.value.trim();
+
+  const consent = document.getElementById('consent');
   
   /* first name validation */
   if (firstName === '') {
@@ -113,6 +115,19 @@ form.addEventListener('submit', (e) => {
     if (messageInput.value.trim() !== '') {
       document.querySelector('#message + .error-message').style.display = 'none';
       messageInput.style.borderColor = ''; 
+    }
+  });
+
+  /* consent validation */
+  if (!consent.checked) {
+    document.querySelector('.consent + .error-message').style.display = 'block';
+  } else {
+    document.querySelector('.consent + .error-message').style.display = 'none';
+  }
+
+  consent.addEventListener('change', () => {
+    if (consent.checked) {
+      document.querySelector('.consent + .error-message').style.display = 'none';
     }
   });
 });
