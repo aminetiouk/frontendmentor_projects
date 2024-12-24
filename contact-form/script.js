@@ -2,6 +2,9 @@ const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
+  let isValid = true;
+  const success = document.querySelector('.success-state');
   
   const firstNameInput = document.getElementById('first-name');
   const firstName = firstNameInput.value.trim();
@@ -21,6 +24,7 @@ form.addEventListener('submit', (e) => {
   
   /* first name validation */
   if (firstName === '') {
+    isValid = false;
     document.querySelector('#first-name + .error-message').style.display = 'block';
     firstNameInput.style.borderColor = 'red';
   } else {
@@ -42,6 +46,7 @@ form.addEventListener('submit', (e) => {
 
   /* last name validation */
   if (lastName === '') {
+    isValid = false;
     document.querySelector('#last-name + .error-message').style.display = 'block';
     lastNameInput.style.borderColor = 'red';
   } else {
@@ -63,6 +68,7 @@ form.addEventListener('submit', (e) => {
 
   /* email validation */
   if (email === '') {
+    isValid = false;
     document.querySelector('#email + .error-message').style.display = 'block';
     emailInput.style.borderColor = 'red';
   } else {
@@ -84,6 +90,7 @@ form.addEventListener('submit', (e) => {
 
   /* query type validation */
   if (!queryType) {
+    isValid = false;
     document.querySelector('.form-query-type + .error-message').style.display =
       'block';
   } else {
@@ -99,6 +106,7 @@ form.addEventListener('submit', (e) => {
 
   /* message validation */
   if (message === '') {
+    isValid = false;
     document.querySelector('#message + .error-message').style.display = 'block';
     messageInput.style.borderColor = 'red';
   } else {
@@ -120,6 +128,7 @@ form.addEventListener('submit', (e) => {
 
   /* consent validation */
   if (!consent.checked) {
+    isValid = false;
     document.querySelector('.consent + .error-message').style.display = 'block';
   } else {
     document.querySelector('.consent + .error-message').style.display = 'none';
@@ -130,4 +139,14 @@ form.addEventListener('submit', (e) => {
       document.querySelector('.consent + .error-message').style.display = 'none';
     }
   });
+
+  /* success message */
+  if (isValid) {
+    success.classList.add('active-state');
+    form.reset();
+
+    setTimeout(() => {
+      success.classList.remove('active-state');
+    }, 7000);
+  }
 });
