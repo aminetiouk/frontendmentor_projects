@@ -318,6 +318,57 @@ button:hover {
   background-color: var(--focus-active);
 }
 
+.success-state {
+  background-color: var(--main);
+  position: fixed;
+  padding: var(--24px);
+  border-radius: var(--8px);
+  pointer-events: none;
+  opacity: 0;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.success-state.active-state {
+  pointer-events: all;
+  animation: slideDown 1s forwards, fadeout 6s forwards 1s;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 9%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0%, 25%, 50%, 75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.success-state .success-state-header {
+  color: var(--white);
+  font-size: var(--14px);
+  margin-bottom: var(--16px);
+  display: flex;
+  gap: var(--8px);
+}
+
+.success-state p {
+  color: var(--white);
+  font-size: var(--16px);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
