@@ -83,7 +83,6 @@ span {
 .error-message {
   color: rgb(195, 74, 74);
   font-size: var(--14px);
-  margin-bottom: var(--16px);
   display: none;
 }
 
