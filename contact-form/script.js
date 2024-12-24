@@ -11,6 +11,13 @@ form.addEventListener('submit', (e) => {
 
   const emailInput = document.getElementById('email');
   const email = emailInput.value.trim();
+
+  const queryType = document.querySelector('input[name="query-type"]:checked');
+
+  const messageInput = document.getElementById('message');
+  const message = messageInput.value.trim();
+
+  const consent = document.getElementById('consent');
   
   /* first name validation */
   if (firstName === '') {
@@ -72,6 +79,55 @@ form.addEventListener('submit', (e) => {
     if (emailInput.value.trim() !== '') {
       document.querySelector('#email + .error-message').style.display = 'none';
       emailInput.style.borderColor = ''; 
+    }
+  });
+
+  /* query type validation */
+  if (!queryType) {
+    document.querySelector('.form-query-type + .error-message').style.display =
+      'block';
+  } else {
+    document.querySelector('.form-query-type + .error-message').style.display =
+      'none';
+  }
+
+  document.querySelectorAll('input[name="query-type"]').forEach(input => {
+    input.addEventListener('change', () => {
+      document.querySelector('.form-query-type + .error-message').style.display = 'none';
+    });
+  });
+
+  /* message validation */
+  if (message === '') {
+    document.querySelector('#message + .error-message').style.display = 'block';
+    messageInput.style.borderColor = 'red';
+  } else {
+    document.querySelector('#message + .error-message').style.display = 'none';
+    messageInput.style.borderColor = '';
+  }
+
+  messageInput.addEventListener('focus', () => {
+    document.querySelector('#message + .error-message').style.display = 'none';
+    messageInput.style.borderColor = '';
+  });
+
+  messageInput.addEventListener('input', () => {
+    if (messageInput.value.trim() !== '') {
+      document.querySelector('#message + .error-message').style.display = 'none';
+      messageInput.style.borderColor = ''; 
+    }
+  });
+
+  /* consent validation */
+  if (!consent.checked) {
+    document.querySelector('.consent + .error-message').style.display = 'block';
+  } else {
+    document.querySelector('.consent + .error-message').style.display = 'none';
+  }
+
+  consent.addEventListener('change', () => {
+    if (consent.checked) {
+      document.querySelector('.consent + .error-message').style.display = 'none';
     }
   });
 });
