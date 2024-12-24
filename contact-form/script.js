@@ -11,6 +11,8 @@ form.addEventListener('submit', (e) => {
 
   const emailInput = document.getElementById('email');
   const email = emailInput.value.trim();
+
+  const queryType = document.querySelector('input[name="query-type"]:checked');
   
   /* first name validation */
   if (firstName === '') {
@@ -73,5 +75,20 @@ form.addEventListener('submit', (e) => {
       document.querySelector('#email + .error-message').style.display = 'none';
       emailInput.style.borderColor = ''; 
     }
+  });
+
+  /* query type validation */
+  if (!queryType) {
+    document.querySelector('.form-query-type + .error-message').style.display =
+      'block';
+  } else {
+    document.querySelector('.form-query-type + .error-message').style.display =
+      'none';
+  }
+
+  document.querySelectorAll('input[name="query-type"]').forEach(input => {
+    input.addEventListener('change', () => {
+      document.querySelector('.form-query-type + .error-message').style.display = 'none';
+    });
   });
 });
