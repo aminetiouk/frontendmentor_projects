@@ -21,6 +21,11 @@ form.addEventListener('submit', (e) => {
   const message = messageInput.value.trim();
 
   const consent = document.getElementById('consent');
+
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
   
   /* first name validation */
   if (firstName === '') {
@@ -67,10 +72,12 @@ form.addEventListener('submit', (e) => {
   });
 
   /* email validation */
-  if (email === '') {
+  if (!validateEmail(email)) {
     isValid = false;
     document.querySelector('#email + .error-message').style.display = 'block';
     emailInput.style.borderColor = 'red';
+    emailInput.value = '';
+    emailInput.placeholder = 'email@example.com';
   } else {
     document.querySelector('#email + .error-message').style.display = 'none';
     emailInput.style.borderColor = '';
