@@ -24,7 +24,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `mortgage-calculator`
 - **Repository**: [Mortgage Repayment Calculator Repo](https://github.com/aminetiouk/frontendmentor_projects/tree/main/mortgage-calculator)
-- [Mortgage Repayment Calculator Live Site](https://contact-form-nu-one.vercel.app/)
+- [Mortgage Repayment Calculator Live Site](https://mortgage-calculator-pi-six.vercel.app/)
 
 ### Bento Grid
 - **Description**: This project is a responsive grid-based layout showcasing a collection of content cards. It demonstrates the use of modern CSS grid techniques to create flexible and visually appealing designs.
