@@ -15,20 +15,37 @@
   </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+  <div class="container">
+    <div class="age">
+      <div class="day_input">
+        <label for="day">day</label>
+        <input type="text" id="day" name="day" placeholder="DD">
+      </div>
+      <div class="month_input">
+        <label for="month">month</label>
+        <input type="text" id="month" name="month" placeholder="MM">
+    </div>
+    <div class="year_input">
+      <label for="year">year</label>
+      <input type="text" id="year" name="year" placeholder="YYYY">
+  </div>
+  <div class="calculate">
+    <button>Calculate</button>
+  </div>
+  <div class="result">
+    <div class="years">
+      <span>--</span>
+      <p>years</p>
+    </div>
+    <div class="months">
+      <span>--</span>
+      <p>months</p>
+    </div>
+    <div class="days">
+      <span>--</span>
+      <p>days</p>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
