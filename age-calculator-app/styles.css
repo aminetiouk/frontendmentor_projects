@@ -29,7 +29,6 @@ body {
   border-bottom-right-radius: 8rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .age {
@@ -76,6 +75,24 @@ body {
   border: none;
   background-color: hsl(264, 76%, 52%);
 }
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 4rem;
+  font-style: italic;
+  gap: 1rem;
+  line-height: 1;
+}
+
+.years-value, .months-value, .days-value {
+  color: hsl(264, 76%, 52%);
+}
+
+
+
 
 .attribution {
   font-size: 11px;
