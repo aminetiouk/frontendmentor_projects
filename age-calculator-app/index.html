@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="./script.js" defer ></script>
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
@@ -15,14 +16,21 @@
       <div class="day_input">
         <label for="day">day</label>
         <input type="text" id="day" name="day" placeholder="DD">
+        <span class="required-field">This field is required</span>
+        <span class="validation">Must be a valid day</span>
+        <span class="validation-date">Must be a valid date</span>
       </div>
       <div class="month_input">
         <label for="month">month</label>
         <input type="text" id="month" name="month" placeholder="MM">
+        <span class="required-field">This field is required</span>
+        <span class="validation">Must be a valid month</span>
       </div>
       <div class="year_input">
         <label for="year">year</label>
         <input type="text" id="year" name="year" placeholder="YYYY">
+        <span class="required-field">This field is required</span>
+        <span class="validation">Must be in the past</span>
       </div>
     </div>
     <div class="calculate">
