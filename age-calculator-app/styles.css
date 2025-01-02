@@ -63,6 +63,10 @@ body {
   font-weight: 700;
 }
 
+.day_input input:focus, .month_input input:focus, .year_input input:focus {
+  outline: 1px solid hsl(264, 76%, 52%);
+}
+
 .calculate {
   display: flex;
   justify-content: center;
