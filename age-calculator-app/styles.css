@@ -87,6 +87,14 @@ body {
   cursor: pointer;
 }
 
+.calculate button:hover {
+  background-color: #000;
+}
+
+.calculate button:focus {
+  background-color: #000;
+}
+
 .result {
   display: flex;
   flex-direction: column;
