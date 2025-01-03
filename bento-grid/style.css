@@ -68,14 +68,18 @@ body {
 .create-schedule {
   grid-area: box1;
   background-color: #FAEEE2;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: -2px;
   line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
 }
 
 .create-schedule img {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .create-schedule span {
