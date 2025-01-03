@@ -24,6 +24,12 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .grid-container {
@@ -55,18 +61,58 @@ body {
 
 .item {
   background: #c0c0c0;
-  padding: 1.5rem;
+  padding: 3rem;
   border-radius: .5rem;
 }
 
 .create-schedule {
   grid-area: box1;
   background-color: #FAEEE2;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
 }
 
 .create-schedule img {
   margin-top: 3rem;
+}
+
+.create-schedule span {
+  color: #7651DC;
+  font-style: italic;
+}
+
+.ai-social {
+  grid-area: box2;
+  background-color: #7651DC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ai-social .first-p {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+
+.ai-social .second-p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  opacity: .8;
+}
+
+.ai-social img {
+  width: 40%;
+}
+
+.ai-social .first {
+  color: #FFCC69;
 }
 
 .write-content {
@@ -79,10 +125,6 @@ body {
   margin-top: 1rem;
 }
 
-.ai-social {
-  grid-area: box2;
-  background-color: #7651DC;
-}
 
 .best-time {
   grid-area: box3;
