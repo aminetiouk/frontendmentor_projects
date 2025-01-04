@@ -174,4 +174,19 @@ body {
 .faster-growth {
   grid-area: box7;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2rem;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.faster-growth span {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.faster-growth img {
+  margin-top: auto;
 }
