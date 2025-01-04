@@ -144,17 +144,49 @@ body {
 .best-time {
   grid-area: box3;
   background-color: #DCD1FC;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.best-time img {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.best-time .header {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.best-time .text {
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-top: 20rem;
+  opacity: .8;
 }
 
 .growth-stats {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: .5rem;
+  gap: 1rem;
   grid-area: box8;
   background-color: #7651DC;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
   color: white;
+  padding: 2rem;
 }
 
 .growth-stats img {
