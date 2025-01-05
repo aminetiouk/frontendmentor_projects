@@ -144,22 +144,23 @@ body {
 .best-time {
   grid-area: box3;
   background-color: #DCD1FC;
-  padding: 2rem 1rem;
+  padding: 2rem;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
   gap: 1rem;
 }
 
 .best-time img {
   position: absolute;
   width: 100%;
-  max-width: 600px;
   height: auto;
+  left: 5.8rem;
+  transform: scale(1.4);
+  top: 12.5rem
 }
 
 .best-time .header {
@@ -196,11 +197,49 @@ body {
 .manage-platforms {
   grid-area: box5;
   background-color: #fff;
+  position: relative;
+  padding: 2rem;
+}
+
+.manage-platforms {
+  grid-area: box5;
+  background-color: #fff;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.manage-platforms .text {
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-top: 6rem;
+}
+
+.manage-platforms img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 5rem;
+  transform: scale(1.3);
 }
 
 .maintain-schedule {
   grid-area: box6;
   background-color: #FFCC69;
+  padding: 2rem;
+  font-size: 2.3rem;
+  position: relative;
+  overflow: hidden;
+  line-height: .9;
+}
+
+.maintain-schedule img {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  margin-top: .9rem;
 }
 
 .faster-growth {
