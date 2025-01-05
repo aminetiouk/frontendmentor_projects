@@ -144,22 +144,23 @@ body {
 .best-time {
   grid-area: box3;
   background-color: #DCD1FC;
-  padding: 2rem 1rem;
+  padding: 2rem;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
   gap: 1rem;
 }
 
 .best-time img {
   position: absolute;
   width: 100%;
-  max-width: 600px;
   height: auto;
+  left: 5.8rem;
+  transform: scale(1.4);
+  top: 11.5rem
 }
 
 .best-time .header {
