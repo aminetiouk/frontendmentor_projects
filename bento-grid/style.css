@@ -225,6 +225,18 @@ body {
 .maintain-schedule {
   grid-area: box6;
   background-color: #FFCC69;
+  padding: 2rem;
+  font-size: 2.3rem;
+  position: relative;
+  overflow: hidden;
+  line-height: .9;
+}
+
+.maintain-schedule img {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  margin-top: .9rem;
 }
 
 .faster-growth {
