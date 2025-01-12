@@ -145,22 +145,16 @@ body {
   grid-area: box3;
   background-color: #DCD1FC;
   padding: 2rem;
-  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .best-time img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  left: 5.8rem;
-  transform: scale(1.4);
-  top: 12.5rem
+  position: relative;
+  max-width: 430px;
 }
 
 .best-time .header {
@@ -172,9 +166,9 @@ body {
 
 .best-time .text {
   font-size: 1.3rem;
-  line-height: 1;
+  line-height: 1.1;
   font-weight: 400;
-  margin-top: 20rem;
+  /* margin-top: 20rem; */
   opacity: .8;
 }
 
@@ -233,13 +227,13 @@ body {
   position: relative;
   overflow: hidden;
   line-height: .9;
+  max-height: 310px;
 }
 
 .maintain-schedule img {
-  width: 80%;
-  height: auto;
-  position: absolute;
-  margin-top: .9rem;
+  position: relative;
+  width: 100%;
+  top: 20%;
 }
 
 .faster-growth {
