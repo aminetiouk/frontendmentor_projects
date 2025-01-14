@@ -21,8 +21,27 @@
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: var(--lightpink);
-  color: var(--dark-purple)
+  color: var(--dark-purple);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+.main-header {
+  background-image: url('./assets/images/background-pattern-desktop.svg');
+  height: 20rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+
+
+
 
 
 
