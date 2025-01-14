@@ -39,6 +39,18 @@ body {
   left: 0;
 }
 
+.faq-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  margin-top: 10rem;
+  width: 770px;
+  height: auto;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
 
 
 
