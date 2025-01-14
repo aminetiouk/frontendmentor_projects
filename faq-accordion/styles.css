@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightpink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--lightpink);
+  color: var(--dark-purple);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-header {
+  background-image: url('./assets/images/background-pattern-desktop.svg');
+  height: 20rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.faq-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  margin-top: 10rem;
+  width: 700px;
+  height: auto;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
