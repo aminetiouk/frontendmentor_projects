@@ -13,6 +13,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Social Links Profile](#social-links-profile)
   - [Recipe Page](#recipe-page)
   - [Contact Form](#contact-form)
+  - [FAQ Accordion](#faq-accordion)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -74,6 +75,13 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `contact-form`
 - **Repository**: [Contact Form](https://github.com/aminetiouk/frontendmentor_projects/tree/main/contact-form)
 - [Contact Form Live Site](https://contact-form-nu-one.vercel.app/)
+
+### FAQ Accordion
+- **Description**: This project is a responsive FAQ accordion component that allows users to expand and collapse sections to view answers to frequently asked questions. It is designed to enhance user experience by organizing information in a compact and accessible manner.
+- **Technology Stack**: HTML, CSS, JavaScript
+- **Branch**: `faq-accordion`
+- **Repository**: [FAQ Accordion](https://github.com/aminetiouk/frontendmentor_projects/tree/main/faq-accordion)
+- [FAQ Accordion Live Site](https://faq-accordion-lyart-three.vercel.app/)
 
 ## Getting Started
 
