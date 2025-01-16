@@ -30,6 +30,9 @@ body {
   gap: 2rem;
 }
 
+
+/* Desktop Styles */
+
 .main-header {
   background-image: url('./assets/images/background-pattern-desktop.svg');
   height: 20rem;
@@ -112,32 +115,52 @@ body {
   color: var(--grayish-purple);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .main-header {
+    height: 15rem;
+  }
+
+  .faq-header {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-main {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1.3rem;
+    width: 80%;
+  }
+
+  .faq-section {
+    gap: 2rem;
+  }
+
+  .faq-answer {
+    font-size: 1.2rem;
+    width: 95%;
+    font-weight: 400;
+    margin-top: 1rem;
+  }
+
+  .faq-article{
+    padding-bottom: 2rem;
+  }
 }
