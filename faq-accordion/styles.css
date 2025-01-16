@@ -10,6 +10,7 @@
   --lightpink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --bright-purple: hsl(291, 82%, 54%);
 }
 
 * {
@@ -70,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .faq-question-container img {
@@ -79,6 +81,10 @@ body {
 .faq-question {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.faq-question:hover {
+  color: var(--bright-purple)
 }
 
 .faq-section {
