@@ -4,7 +4,7 @@
   --tomato: hsl(4, 100%, 67%);
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
-  --grey: hsl(231, 7%, 60%);
+  --grey: hsl(210, 2%, 79%);
   --white: hsl(0, 0%, 100%);
 }
 
@@ -27,6 +27,86 @@ body {
 }
 
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--white);
+  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 880px;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.left h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--dark-slate-grey);
+  margin-bottom: 2rem;
+}
+
+.left p {
+  font-size: .9rem;
+  color: var(--charcoal-grey);
+  margin-bottom: 1.5rem;
+}
+
+.left ul li {
+  list-style-image: url('./assets/images/icon-list.svg');
+  list-style-position: inside;
+  color: var(--charcoal-grey);
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.left ul li::before {
+  content: '';
+  margin-left: .5rem;
+}
+
+.left label {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--charcoal-grey);
+  margin-bottom: .5rem;
+}
+
+.left input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+}
+
+.left button {
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: .2rem;
+  font-size: .9rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+}
+.left ul {
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+.success-msg {
+  display: none;
+}
 
 
 
