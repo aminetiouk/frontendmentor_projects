@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-button {
-  all: unset;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--dark-slate-grey);
@@ -121,11 +117,55 @@ body {
 }
 
 
-
+.container {
+  display: none;
+}
 
 
 .success-msg {
-  display: none;
+  /* display: none; */
+  background-color: var(--white);
+  max-width: 380px;
+  padding: 2.5rem 3rem;
+  border-radius: 2rem;
+
+}
+
+.success-msg img {
+  width: 20%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.success-msg h1 {
+  font-size: 2.5rem;
+  color: var(--dark-slate-grey);
+  margin-bottom: 1.5rem;
+}
+
+.success-msg p {
+  font-size: .9rem;
+  color: var(--charcoal-grey);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.success-msg button {
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  padding: 1rem;
+  width: 100%;
+  border-radius: .4rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  transition: background .3s;
+}
+
+.success-msg button:hover {
+  background: #ff5a69;
 }
 
 
