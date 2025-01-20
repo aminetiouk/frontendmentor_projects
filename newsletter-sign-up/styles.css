@@ -60,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   margin-bottom: 2.5rem;
 }
 
@@ -80,24 +80,47 @@ body {
   height: 1.2rem;
 }
 
-.left label {
-  font-size: .9rem;
-  font-weight: 600;
+.left .input__container {
+  font-size: .8rem;
+  font-weight: 500;
   color: var(--charcoal-grey);
   margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.left input {
+.input__container .email-error {
+  display: none;
+  color: var(--tomato);
+  font-weight: 400;
+}
+
+.left .email-input.input-error {
+  color: var(--tomato);
+  border: 1px solid var(--tomato);
+  background-color: var(--tomato);
+}
+
+.left .email-input {
   width: 100%;
   padding: 1rem;
+  color: var(--dark-slate-grey);
   border: 1px solid var(--grey);
   border-radius: .2rem;
   margin-bottom: 1rem;
+  transition: all .3s;
 }
 
-.left input:focus {
+.left input:hover, .left input:focus {
   outline: none;
-  border: 1px solid var(--tomato);
+  border-color: var(--dark-slate-grey);
+}
+
+.left input:-webkit-autofill,
+.left input:-webkit-autofill:hover,
+.left input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px var(--white) inset;
+  -webkit-text-fill-color: var(--dark-slate-grey);
 }
 
 .left button {
@@ -105,6 +128,7 @@ body {
   color: var(--white);
   padding: 1rem;
   border-radius: .2rem;
+  border: none;
   font-size: .9rem;
   font-weight: 400;
   cursor: pointer;
@@ -116,19 +140,29 @@ body {
   background: #ff5a69;
 }
 
-
-.container {
-  display: none;
-}
-
-
 .success-msg {
-  /* display: none; */
+  display: none;
   background-color: var(--white);
   max-width: 380px;
   padding: 2.5rem 3rem;
   border-radius: 2rem;
+  animation: slideIn .9s ease-in-out;
+}
 
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  50% {
+    opacity: .5;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .success-msg img {
@@ -166,6 +200,10 @@ body {
 
 .success-msg button:hover {
   background: #ff5a69;
+}
+
+#email-user {
+  font-weight: 700;
 }
 
 
