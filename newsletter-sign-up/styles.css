@@ -21,8 +21,11 @@ button {
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--dark-slate-grey);
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   height: 100vh;
 }
 
@@ -52,24 +55,34 @@ body {
   margin-bottom: 2rem;
 }
 
-.left p {
+.left > p {
   font-size: .9rem;
   color: var(--charcoal-grey);
   margin-bottom: 1.5rem;
 }
 
-.left ul li {
-  list-style-image: url('./assets/images/icon-list.svg');
-  list-style-position: inside;
-  color: var(--charcoal-grey);
-  margin-bottom: .5rem;
-  font-size: .9rem;
-  font-weight: 500;
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1rem;
 }
 
-.left ul li::before {
-  content: '';
-  margin-left: .5rem;
+.list p {
+  font-size: .9rem;
+  color: var(--charcoal-grey);
+}
+
+.list div {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.left .list img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .left label {
