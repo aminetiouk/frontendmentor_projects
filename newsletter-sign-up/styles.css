@@ -50,7 +50,6 @@ body {
 
 .left h1 {
   font-size: 3rem;
-  text-align: center;
   color: var(--dark-slate-grey);
   margin-bottom: 2rem;
 }
@@ -66,7 +65,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: .5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .list p {
@@ -100,6 +99,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.left input:focus {
+  outline: none;
+  border: 1px solid var(--tomato);
+}
+
 .left button {
   background-color: var(--dark-slate-grey);
   color: var(--white);
@@ -109,10 +113,13 @@ body {
   font-weight: 400;
   cursor: pointer;
   text-align: center;
+  transition: background .3s;
 }
-.left ul {
-  margin-bottom: 1.5rem;
+
+.left button:hover {
+  background: #ff5a69;
 }
+
 
 
 
