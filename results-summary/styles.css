@@ -5,6 +5,12 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* Primary Colors */
   --light-red: hsl(0, 100%, 67%);
@@ -27,6 +33,88 @@
   /* Typography */
   --font-size-paragraph: 18px;
 }
+
+.results-summary {
+  font-family: 'HankenGrotesk', sans-serif;
+  background-color: var(--pale-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 820px;
+  height: 600px;
+  background-color: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.result {
+  flex: 1;
+  border-radius: 2rem;
+  background: linear-gradient(360deg, var(--light-slate-blue), var(--light-royal-blue));
+  height: 100%;
+  color: var(--white);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.result__title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+
+.result__score-container {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(180deg, var(--light-slate-blue), var(--light-royal-blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+}
+
+.result__score {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.result__description {
+  font-size: 1.4rem;
+  color: var(--light-lavender);
+}
+
+.result__message {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.result__comparison {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 300;
+  padding: 0 .4rem;
+}
+
+
+.summary {
+  flex: 1;
+  padding: 3rem;
+}
+
 
 .attribution {
   font-size: 11px;
