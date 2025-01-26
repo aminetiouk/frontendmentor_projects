@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Results summary component</title>
 
 </head>
@@ -13,8 +13,10 @@
   <div class="container">
     <section class="result">
       <h1 class="result__title">Your Result</h1>
-      <p class="result__score">76</p>
-      <p class="result__description">of 100</p>
+      <div class="result__score-container">
+        <p class="result__score">76</p>
+        <p class="result__description">of 100</p>
+      </div>
       <p class="result__message">Great</p>
       <p class="result__comparison">You scored higher than 65% of the people who have taken this test.</p>
     </section>
