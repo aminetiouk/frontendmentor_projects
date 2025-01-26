@@ -14,6 +14,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Recipe Page](#recipe-page)
   - [Contact Form](#contact-form)
   - [FAQ Accordion](#faq-accordion)
+  - [Results Summary Component](#results-summary-component)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -82,6 +83,13 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `faq-accordion`
 - **Repository**: [FAQ Accordion](https://github.com/aminetiouk/frontendmentor_projects/tree/main/faq-accordion)
 - [FAQ Accordion Live Site](https://faq-accordion-lyart-three.vercel.app/)
+
+### Results Summary Component
+- **Description**: This project is a responsive results summary component that displays a summary of results in a visually appealing and easy-to-read format. It is designed to help users quickly understand and analyze their results.
+- **Technology Stack**: HTML, CSS, JavaScript
+- **Branch**: `results-summary-component`
+- **Repository**: [Results Summary Component](https://github.com/aminetiouk/frontendmentor_projects/tree/results-summary/results-summary)
+<!-- - [Results Summary Component Live Site](https://results-summary-component.vercel.app/) -->
 
 ## Getting Started
 
