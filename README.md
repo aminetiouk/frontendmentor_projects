@@ -89,7 +89,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `results-summary-component`
 - **Repository**: [Results Summary Component](https://github.com/aminetiouk/frontendmentor_projects/tree/results-summary/results-summary)
-<!-- - [Results Summary Component Live Site](https://results-summary-component.vercel.app/) -->
+- [Results Summary Component Live Site](https://results-summary-two-virid.vercel.app/)
 
 ## Getting Started
 
