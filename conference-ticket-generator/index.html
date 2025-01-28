@@ -8,11 +8,6 @@
   
   <title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="header">
@@ -55,19 +50,28 @@
   <!-- Form ends -->
 
   <!-- Generated tickets starts -->
-
-  Congrats, <!-- Full Name -->! Your ticket is ready.
-
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
+<div id="ticket" class="ticket">
+  <section class="ticket__message">
+    <h1 class="ticket__title">Congrats, <!-- Full Name -->! Your ticket is ready.</h1>
+    <p class="ticket__description">We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.</p>
+  </section>
+  <section class="ticket__details">
+    <div class="ticket__info">
+      <img src="./assets/images/logo-mark.svg" alt="Coding Conf" class="ticket__icon">
+      <h2 class="ticket__event">Coding Conf</h2>
+      <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+    </div>
+    <div class="avatar-info">
+      <img src="./assets/images/image-avatar.jpg" alt="Avatar" class="avatar">
+      <div class="avatar__details">
+        <h3 class="avatar__name"><!-- Full Name --></h3>
+        <p class="avatar__github"><!-- Github Username --></p>
+      </div>
+    </div>
+  </section>
+</div>
 
   <!-- Generated tickets ends -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
