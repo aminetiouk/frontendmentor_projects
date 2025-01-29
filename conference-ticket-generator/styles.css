@@ -43,7 +43,32 @@ body {
   font-size: 2rem;
 }
 
+.pattern-circle {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
 
+.pattern-lines {
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  
+}
+.pattern-squiggly-top {
+  position: absolute;
+  object-fit: cover;
+  top: 10%;
+  right: 0;
+}
+
+.pattern-squiggly-bottom {
+  position: absolute;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+}
 
 #ticket {
   display: none;
