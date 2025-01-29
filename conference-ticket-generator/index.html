@@ -17,6 +17,12 @@
     <title>Frontend Mentor | Conference ticket generator</title>
   </head>
   <body>
+    <div class="pattern-container">
+      <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="pattern squiggly line bottom desktop" class="pattern__squiggly-bottom" />
+      <img src="./assets/images/pattern-squiggly-line-top.svg" alt="pattern squiggly line top" class="pattern__squiggly-top" />
+      <img src="./assets/images/pattern-circle.svg" alt="pattern circle" class="pattern__circle" />
+      <img src="./assets/images/pattern-lines.svg" alt="pattern lines" class="pattern__lines" />
+    </div>
     <div class="header">
       <img
         src="./assets/images/logo-mark.svg"
@@ -89,11 +95,11 @@
       <section class="ticket__message">
         <h1 class="ticket__title">
           Congrats,
-          <!-- Full Name -->! Your ticket is ready.
+            <span class="ticket__name"><!-- Full Name --></span>! Your ticket is ready.
         </h1>
         <p class="ticket__description">
           We've emailed your ticket to
-          <!-- Email Address -->
+          <span class="ticket__email"><!-- Email Address --></span>
           and will send updates in the run up to the event.
         </p>
       </section>
@@ -130,7 +136,6 @@
         </div>
       </div>
     </div>
-
     <!-- Generated tickets ends -->
   </body>
 </html>
