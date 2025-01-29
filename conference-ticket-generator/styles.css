@@ -25,6 +25,25 @@ body {
   flex-direction: column;
 }
 
+.header {
+  position: absolute;
+  top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__icon {
+  width: 35px;
+  height: 35px;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+
 
 #ticket {
   display: none;
