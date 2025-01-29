@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inconsolata', sans-serif;
+  background: url('./assets/images/background-desktop.png') no-repeat center center/cover fixed;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__icon {
+  width: 35px;
+  height: 35px;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.pattern-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.pattern__circle {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+
+.pattern__lines {
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  
+}
+.pattern__squiggly-top {
+  position: absolute;
+  object-fit: cover;
+  top: 10%;
+  right: 0;
+}
+
+.pattern__squiggly-bottom {
+  position: absolute;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+}
+
+#ticket {
+  display: none;
+}
