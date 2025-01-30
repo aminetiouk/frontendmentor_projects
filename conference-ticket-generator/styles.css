@@ -35,6 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 }
 
 .header__icon {
@@ -54,10 +55,32 @@ body {
   height: 100%;
   z-index: -1;
 }
-.pattern__circle {
+.pattern__circle-1 {
   position: absolute;
   top: 50%;
   left: 60%;
+  animation: wiggle-1 15s ease-in-out infinite;
+}
+.pattern__circle-2 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  animation: wiggle-2 30s ease-in-out infinite;
+}
+
+@keyframes wiggle-1 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, -50px); }
+  50% { transform: translate(-50px, 50px); }
+  75% { transform: translate(50px, -50px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes wiggle-2 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-60px, -60px); }
+  50% { transform: translate(60px, -60px); }
+  75% { transform: translate(-60px, 60px); }
+  100% { transform: translate(0, 0); }
 }
 
 .pattern__lines {
@@ -86,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .ticket-form__header {
@@ -96,7 +119,6 @@ body {
   align-items: center;
   gap: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
   width: 900px;
 }
 
@@ -118,10 +140,11 @@ body {
   width: 450px;
 }
 .upload {
-
 }
+
 .upload__title {
-  margin-bottom: .6rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .upload__container {
@@ -138,15 +161,22 @@ body {
   border: 1px dashed hsl(245, 15%, 58%);
 }
 
+.upload__container:hover {
+  background-color: hsl(245, 19%, 35%);
+}
+
 .upload__input {
   display: none;
 }
 
 .upload__icon {
   background-color: hsl(247, 38%, 28%);
-  width: 30px;
-  height: 30px;
-  
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: .4px solid hsl(245, 19%, 49%);
+  padding: 5px;
+
 }
 .upload__text {
   font-size: 0.8rem;
@@ -157,6 +187,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 .info-icon {
   width: 15px;
@@ -170,7 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .full-name__input, .email__input, .github-username__input {
@@ -180,9 +211,24 @@ body {
   padding: 0.5rem;
   color: #fff;
   padding: 1rem .9rem;
+  transition: all 0.3s ease;
 }
 
-.Generate-button {
+.full-name__input:hover, .email__input:hover, .github-username__input:hover {
+  background-color: hsl(245, 19%, 35%);
+}
+
+.full-name__input::placeholder, .email__input::placeholder, .github-username__input::placeholder {
+  color: hsl(245, 17%, 72%);
+  letter-spacing: 1px;
+}
+
+.full-name__input:focus, .email__input:focus, .github-username__input:focus {
+  border: .5px solid hsl(7, 75%, 77%);
+  outline: none;
+}
+
+.generate-button {
   width: 100%;
   margin-top: 1rem;
   padding: 1rem;
@@ -194,6 +240,11 @@ body {
   text-transform: uppercase;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+  background-color: hsl(7, 71%, 60%);
 }
 
 #ticket {
