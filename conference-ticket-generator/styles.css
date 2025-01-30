@@ -108,6 +108,61 @@ body {
   font-size: 1.5rem;
 }
 
+/* UPLOAD */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 450px;
+}
+.upload {
+
+}
+.upload__title {
+  margin-bottom: .6rem;
+}
+
+.upload__container {
+  background-color: hsl(247, 55%, 15%);
+  border-radius: 10px;
+  width: 450px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: 1px dashed hsl(245, 15%, 58%);
+}
+
+
+.upload__icon {
+  background-color: hsl(247, 38%, 28%);
+  width: 30px;
+  height: 30px;
+  
+}
+.upload__text {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.upload__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.info-icon {
+  width: 15px;
+  height: 15px;
+}
+.upload__description {
+  font-size: 0.7rem;
+}
+
 
 #ticket {
   display: none;
