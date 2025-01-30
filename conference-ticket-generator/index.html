@@ -18,10 +18,26 @@
   </head>
   <body>
     <div class="pattern-container">
-      <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="pattern squiggly line bottom desktop" class="pattern__squiggly-bottom" />
-      <img src="./assets/images/pattern-squiggly-line-top.svg" alt="pattern squiggly line top" class="pattern__squiggly-top" />
-      <img src="./assets/images/pattern-circle.svg" alt="pattern circle" class="pattern__circle" />
-      <img src="./assets/images/pattern-lines.svg" alt="pattern lines" class="pattern__lines" />
+      <img
+        src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        alt="pattern squiggly line bottom desktop"
+        class="pattern__squiggly-bottom"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="pattern squiggly line top"
+        class="pattern__squiggly-top"
+      />
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt="pattern circle"
+        class="pattern__circle"
+      />
+      <img
+        src="./assets/images/pattern-lines.svg"
+        alt="pattern lines"
+        class="pattern__lines"
+      />
     </div>
     <div class="header">
       <img
@@ -43,50 +59,62 @@
           Secure your spot at next year's biggest coding conference.
         </p>
       </section>
-      <div class="upload__avatar">
-        <h3 class="upload__avatar-title">Upload Avatar</h3>
-        <div class="upload__avatar-container">
-          <img
-            src="./assets/images/icon-upload.svg"
-            alt="Upload Avatar"
-            class="upload__avatar-icon"
-          />
-          <p class="upload__avatar-text">Drag and drop or click to upload</p>
+      <div class="form-container">
+        <div class="upload">
+          <label for="file" class="upload__title"
+            >Upload Avatar
+            <div class="upload__container">
+              <input type="file" id="file" class="upload__input" />
+              <img
+                src="./assets/images/icon-upload.svg"
+                alt="Upload Avatar"
+                class="upload__icon"
+              />
+              <p class="upload__text">Drag and drop or click to upload</p>
+            </div>
+          </label>
+          <div class="upload__info">
+            <img
+              src="./assets/images/icon-info.svg"
+              alt="info icon"
+              class="info-icon"
+            />
+            <p class="upload__description">
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+          </div>
         </div>
-        <div class="upload__avatar-info">
-          <img
-            src="./assets/images/icon-info.svg"
-            alt="info icon"
-            class="info-icon"
+        <div class="full-name">
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            class="full-name__input"
           />
-          <p class="upload__avatar-description">
-            Upload your photo (JPG or PNG, max size: 500KB).
-          </p>
         </div>
+        <div class="email">
+          <label for="email">Email Address</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            class="email__input"
+          />
+        </div>
+        <div class="github-username">
+          <label for="github-username">Github Username</label>
+          <input
+            type="text"
+            id="github-username"
+            name="github-username"
+            placeholder="@yourusername"
+            class="github-username__input"
+          />
+        </div>
+        <button class="Generate-button">Generate My Ticket</button>
       </div>
-      <div class="full-name">
-        <label for="full-name">Full Name</label>
-        <input type="text" id="full-name" name="full-name" />
-      </div>
-      <div class="email">
-        <label for="email">Email Address</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="example@email.com"
-        />
-      </div>
-      <div class="github-username">
-        <label for="github-username">Github Username</label>
-        <input
-          type="text"
-          id="github-username"
-          name="github-username"
-          placeholder="@yourusername"
-        />
-      </div>
-      <button class="button">Generate My Ticket</button>
     </form>
     <!-- Form ends -->
 
@@ -95,7 +123,8 @@
       <section class="ticket__message">
         <h1 class="ticket__title">
           Congrats,
-            <span class="ticket__name"><!-- Full Name --></span>! Your ticket is ready.
+          <span class="ticket__name"><!-- Full Name --></span>! Your ticket is
+          ready.
         </h1>
         <p class="ticket__description">
           We've emailed your ticket to
@@ -119,11 +148,11 @@
             <h2 class="ticket__event">Coding Conf</h2>
             <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
           </div>
-          <div class="avatar-info">
+          <div class="avatar">
             <img
               src="./assets/images/image-avatar.jpg"
               alt="Avatar"
-              class="avatar"
+              class="avatar__photo"
             />
             <div class="avatar__details">
               <h3 class="avatar__name"><!-- Full Name --></h3>
