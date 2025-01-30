@@ -138,6 +138,9 @@ body {
   border: 1px dashed hsl(245, 15%, 58%);
 }
 
+.upload__input {
+  display: none;
+}
 
 .upload__icon {
   background-color: hsl(247, 38%, 28%);
