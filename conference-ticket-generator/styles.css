@@ -109,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 4.5rem;
 }
 
 .ticket-form__header {
@@ -117,17 +117,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   text-align: center;
   width: 900px;
 }
 
 .ticket-form__title {
-  font-size: 3rem;
+  font-size: 3.8rem;
 }
 
 .ticket-form__description {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color: hsl(244, 23%, 76%);
 }
 
 /* UPLOAD */
@@ -143,8 +144,9 @@ body {
 }
 
 .upload__title {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   font-size: 1rem;
+  color: hsl(246, 25%, 77%)
 }
 
 .upload__container {
@@ -159,6 +161,7 @@ body {
   margin-bottom: 1rem;
   cursor: pointer;
   border: 1px dashed hsl(245, 15%, 58%);
+  transition: all 0.3s ease;
 }
 
 .upload__container:hover {
@@ -180,7 +183,7 @@ body {
 }
 .upload__text {
   font-size: 0.8rem;
-  color: #fff;
+  color: hsl(245, 17%, 72%);
   margin-top: 0.5rem;
 }
 .upload__info {
@@ -188,20 +191,39 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  color: hsl(244, 23%, 76%);
+}
+.upload__error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: hsl(7, 88%, 67%);
+}
+.hidden {
+  display: none;
 }
 .info-icon {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask: url('./assets/images/icon-info.svg') no-repeat center;
+  mask: url('./assets/images/icon-info.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 .upload__description {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
+
+/* INPUTS */
 
 .full-name, .email, .github-username {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .full-name__input, .email__input, .github-username__input {
@@ -224,9 +246,26 @@ body {
 }
 
 .full-name__input:focus, .email__input:focus, .github-username__input:focus {
-  border: .5px solid hsl(7, 75%, 77%);
+  border: .5px solid hsl(169, 88%, 56%);
   outline: none;
 }
+
+/* ERROR */
+.full-name__error, .email__error, .github-username__error {
+  color: hsl(7, 88%, 67%);
+  font-size: 0.8rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+}
+
+.hidden-input {
+  display: none;
+}
+
+/* GENERATE BUTTON */
 
 .generate-button {
   width: 100%;
