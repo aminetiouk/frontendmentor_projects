@@ -361,3 +361,42 @@ background-clip: text;
   color: hsl(244, 23%, 76%);
 }
 
+/* AVATAR */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 8%;
+  left: 4%;
+}
+.avatar__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+.avatar__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.avatar__name {
+  font-weight: 350;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.avatar__github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.avatar__github-icon {
+  width: 20px;
+  height: 20px;;
+}
+.avatar__github-username {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: hsl(244, 23%, 76%);
+}
