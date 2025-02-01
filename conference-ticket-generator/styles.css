@@ -400,3 +400,15 @@ background-clip: text;
   font-weight: 300;
   color: hsl(244, 23%, 76%);
 }
+
+/* TICKET CODE */
+
+.ticket__code {
+  position: absolute;
+  transform: rotate(90deg);
+  right: 1.5%;
+
+  font-size: 2rem;
+  font-weight: 300;
+  color: hsl(245, 28%, 64%);
+}
