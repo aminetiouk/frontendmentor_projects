@@ -79,13 +79,15 @@
             </div>
           </label>
           <div class="upload__info">
-            <img
-              src="./assets/images/icon-info.svg"
-              alt="info icon"
-              class="info-icon"
-            />
+            <div class="info-icon"></div>
             <p class="upload__description">
               Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+          </div>
+          <div class="upload__error hidden">
+            <div class="info-icon"></div>
+            <p class="upload__description">
+              File too large. Please upload a photo under 500KB.
             </p>
           </div>
         </div>
@@ -98,6 +100,12 @@
             class="full-name__input"
           />
         </div>
+        <div class="full-name__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="full-name__description">
+            Please enter your full name (at least 3 characters).
+          </p>
+        </div>
         <div class="email">
           <label for="email">Email Address</label>
           <input
@@ -108,6 +116,12 @@
             class="email__input"
           />
         </div>
+        <div class="email__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="email__description">
+            Please enter a valid email address.
+          </p>
+        </div>
         <div class="github-username">
           <label for="github-username">Github Username</label>
           <input
@@ -117,6 +131,12 @@
             placeholder="@yourusername"
             class="github-username__input"
           />
+        </div>
+        <div class="github-username__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="github-username__description">
+            Please enter your Github username (at least 3 characters).
+          </p>
         </div>
         <button class="generate-button">Generate My Ticket</button>
       </div>
@@ -143,15 +163,17 @@
           alt="Ticket"
           class="ticket__pattern"
         />
-        <section class="ticket__details">
+        <!-- <section class="ticket__details"> -->
           <div class="ticket__info">
             <img
               src="./assets/images/logo-mark.svg"
               alt="Coding Conf"
               class="ticket__icon"
             />
-            <h2 class="ticket__event">Coding Conf</h2>
-            <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+            <div class="ticket__event-details">
+              <p class="ticket__event">Coding Conf</p>
+              <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+            </div>
           </div>
           <div class="avatar">
             <img
@@ -160,11 +182,18 @@
               class="avatar__photo"
             />
             <div class="avatar__details">
-              <h3 class="avatar__name"><!-- Full Name --></h3>
-              <p class="avatar__github"><!-- Github Username --></p>
+              <p class="avatar__name"><!-- Full Name --></p>
+              <div class="avatar__github">
+                <img
+                  src="./assets/images/icon-github.svg"
+                  alt="Github"
+                  class="avatar__github-icon"
+                />
+                <p class="avatar__github-username"><!-- Github Username --></p>
+              </div>
             </div>
           </div>
-        </section>
+        <!-- </section> -->
         <div class="ticket__code">
           #<span class="ticket__code-number"><!-- Code Number --></span>
         </div>
