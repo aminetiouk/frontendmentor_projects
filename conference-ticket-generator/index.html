@@ -163,15 +163,17 @@
           alt="Ticket"
           class="ticket__pattern"
         />
-        <section class="ticket__details">
+        <!-- <section class="ticket__details"> -->
           <div class="ticket__info">
             <img
               src="./assets/images/logo-mark.svg"
               alt="Coding Conf"
               class="ticket__icon"
             />
-            <h2 class="ticket__event">Coding Conf</h2>
-            <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+            <div class="ticket__event-details">
+              <p class="ticket__event">Coding Conf</p>
+              <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+            </div>
           </div>
           <div class="avatar">
             <img
@@ -180,11 +182,18 @@
               class="avatar__photo"
             />
             <div class="avatar__details">
-              <h3 class="avatar__name"><!-- Full Name --></h3>
-              <p class="avatar__github"><!-- Github Username --></p>
+              <p class="avatar__name"><!-- Full Name --></p>
+              <div class="avatar__github">
+                <img
+                  src="./assets/images/icon-github.svg"
+                  alt="Github"
+                  class="avatar__github-icon"
+                />
+                <p class="avatar__github-username"><!-- Github Username --></p>
+              </div>
             </div>
           </div>
-        </section>
+        <!-- </section> -->
         <div class="ticket__code">
           #<span class="ticket__code-number"><!-- Code Number --></span>
         </div>
