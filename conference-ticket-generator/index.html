@@ -31,12 +31,7 @@
       <img
         src="./assets/images/pattern-circle.svg"
         alt="pattern circle"
-        class="pattern__circle-1"
-      />
-      <img
-        src="./assets/images/pattern-circle.svg"
-        alt="pattern circle"
-        class="pattern__circle-2"
+        class="pattern__circle"
       />
       <img
         src="./assets/images/pattern-lines.svg"
@@ -44,55 +39,55 @@
         class="pattern__lines"
       />
     </div>
-    <div class="header">
-      <img
-        src="./assets/images/logo-mark.svg"
-        alt="Coding Conf"
-        class="header__icon"
-      />
-      <h1 class="header__title">Coding Conf</h1>
-    </div>
-
+    <!-- Logo -->
+    <section class="ticket__logo">
+      <img src="./assets/images/logo-full.svg" alt="Coding Conf" />
+    </section>
+    <!-- Header -->
+    <section class="header">
+      <h1 class="header__title">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="header__description">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </section>
     <!-- Form starts -->
-
     <form id="ticket-form" class="ticket-form">
-      <section class="ticket-form__header">
-        <h1 class="ticket-form__title">
-          Your Journey to Coding Conf 2025 Starts Here!
-        </h1>
-        <p class="ticket-form__description">
-          Secure your spot at next year's biggest coding conference.
-        </p>
-      </section>
-      <div class="form-container">
-        <div class="upload">
-          <label for="file" class="upload__label">
-            <h3 class="upload__title">Upload Avatar</h3>
-            <div class="upload__container">
-              <input type="file" id="file" class="upload__input" />
-              <img
-                src="./assets/images/icon-upload.svg"
-                alt="Upload Avatar"
-                class="upload__icon"
-              />
-              <p class="upload__text">Drag and drop or click to upload</p>
-            </div>
-          </label>
-          <div class="upload__info">
-            <div class="info-icon"></div>
-            <p class="upload__description">
-              Upload your photo (JPG or PNG, max size: 500KB).
-            </p>
+      <section class="ticket-form__upload">
+        <label for="file" class="upload__label">
+          <h3 class="upload__title">Upload Avatar</h3>
+          <div class="upload__container">
+            <input
+              type="file"
+              id="file"
+              accept="image/png, image/jpeg"
+              class="upload__input"
+            />
+            <img
+              src="./assets/images/icon-upload.svg"
+              alt="Upload Avatar"
+              class="upload__icon"
+            />
+            <p class="upload__text">Drag and drop or click to upload</p>
           </div>
-          <div class="upload__error hidden">
-            <div class="info-icon"></div>
-            <p class="upload__description">
-              File too large. Please upload a photo under 500KB.
-            </p>
-          </div>
+        </label>
+        <div class="upload__info">
+          <div class="info-icon"></div>
+          <p class="upload__description">
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </p>
         </div>
+        <div class="upload__error hidden">
+          <div class="info-icon"></div>
+          <p class="upload__description">
+            File too large. Please upload a photo under 500KB.
+          </p>
+        </div>
+      </section>
+      <section class="ticket-form__details">
         <div class="full-name">
-          <label for="full-name">Full Name</label>
+          <label for="full-name" class="label">Full Name</label>
           <input
             type="text"
             id="full-name"
@@ -107,7 +102,7 @@
           </p>
         </div>
         <div class="email">
-          <label for="email">Email Address</label>
+          <label for="email" class="label">Email Address</label>
           <input
             type="text"
             id="email"
@@ -118,12 +113,10 @@
         </div>
         <div class="email__error hidden-input">
           <div class="info-icon"></div>
-          <p class="email__description">
-            Please enter a valid email address.
-          </p>
+          <p class="email__description">Please enter a valid email address.</p>
         </div>
         <div class="github-username">
-          <label for="github-username">Github Username</label>
+          <label for="github-username" class="label">Github Username</label>
           <input
             type="text"
             id="github-username"
@@ -139,19 +132,19 @@
           </p>
         </div>
         <button class="generate-button">Generate My Ticket</button>
-      </div>
+      </section>
     </form>
     <!-- Form ends -->
 
     <!-- Generated tickets starts -->
     <div id="ticket" class="ticket">
-      <section class="ticket__message">
+      <section class="ticket__header">
         <h1 class="ticket__title">
           Congrats,
           <span class="ticket__name"><!-- Full Name --></span>! Your ticket is
           ready.
         </h1>
-        <p class="ticket__description">
+        <p class="ticket__message">
           We've emailed your ticket to
           <span class="ticket__email"><!-- Email Address --></span>
           and will send updates in the run up to the event.
@@ -163,37 +156,37 @@
           alt="Ticket"
           class="ticket__pattern"
         />
-        <!-- <section class="ticket__details"> -->
-          <div class="ticket__info">
-            <img
-              src="./assets/images/logo-mark.svg"
-              alt="Coding Conf"
-              class="ticket__icon"
-            />
-            <div class="ticket__event-details">
-              <p class="ticket__event">Coding Conf</p>
-              <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+        <div class="ticket__info">
+          <img
+            src="./assets/images/logo-mark.svg"
+            alt="Coding Conf"
+            class="ticket__icon"
+          />
+          <div class="ticket__event-details">
+            <p class="ticket__event">Coding Conf</p>
+            <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket__avatar">
+          <img
+            src="./assets/images/image-avatar.jpg"
+            alt="Avatar"
+            class="ticket__avatar-image"
+          />
+          <div class="ticket__avatar-details">
+            <p class="ticket__avatar-name"><!-- Full Name --></p>
+            <div class="ticket__avatar-github">
+              <img
+                src="./assets/images/icon-github.svg"
+                alt="Github"
+                class="ticket__avatar-github-icon"
+              />
+              <p class="ticket__avatar-github-username">
+                <!-- Github Username -->
+              </p>
             </div>
           </div>
-          <div class="avatar">
-            <img
-              src="./assets/images/image-avatar.jpg"
-              alt="Avatar"
-              class="avatar__photo"
-            />
-            <div class="avatar__details">
-              <p class="avatar__name"><!-- Full Name --></p>
-              <div class="avatar__github">
-                <img
-                  src="./assets/images/icon-github.svg"
-                  alt="Github"
-                  class="avatar__github-icon"
-                />
-                <p class="avatar__github-username"><!-- Github Username --></p>
-              </div>
-            </div>
-          </div>
-        <!-- </section> -->
+        </div>
         <div class="ticket__code">
           #<span class="ticket__code-number"><!-- Code Number --></span>
         </div>
