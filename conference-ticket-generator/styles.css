@@ -74,17 +74,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* TICKET FORM */
-
-.ticket__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  max-width: 920px;
-}
-
-
 /* HEADER */
 
 .header {
@@ -106,11 +95,19 @@ body {
   font-size: 1.3rem;
   color: hsl(244, 23%, 76%);
 }
+/* TICKET FORM */
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+}
 
 /* UPLOAD */
 
 .ticket-form__upload {
-  width: 450px;
   margin-bottom: 1.5rem;
 }
 
@@ -150,7 +147,6 @@ body {
   border-radius: 8px;
   border: .4px solid hsl(245, 19%, 49%);
   padding: 5px;
-
 }
 .upload__text {
   font-size: 0.8rem;
@@ -193,7 +189,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
 }
 
 .full-name, .email, .github-username {
@@ -273,37 +268,39 @@ body {
 }
 
 /* TICKET */
-
-.ticket {
+.header {
   display: none;
+}
+.ticket-form {
+  display: none;
+}
+.ticket {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
-  max-width: 920px;
+  max-width: 800px;
+  text-align: center;
 }
-
-.ticket__message {
+.ticket__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  margin-bottom: 7rem;
+  margin-top: 3rem;
 }
-
 .ticket__title {
-  font-size: 4rem;
-  text-align: center;
+  font-size: 3.5rem;
 }
 .ticket__name {
-background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-.ticket__description {
+.ticket__message {
   font-size: 1.3rem;
   color: hsl(244, 23%, 76%);
-  text-align: center;
   max-width: 450px;
   line-height: 1.5;
 }
@@ -335,21 +332,23 @@ background-clip: text;
 .ticket__event-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .ticket__event{
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
 .ticket__date {
   color: hsl(244, 23%, 76%);
+  font-size: 1.2rem;
 }
 
 /* AVATAR */
 
-.avatar {
+.ticket__avatar {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -357,31 +356,31 @@ background-clip: text;
   bottom: 8%;
   left: 4%;
 }
-.avatar__photo {
+.ticket__avatar-image {
   width: 80px;
   height: 80px;
   border-radius: 10px;
 }
-.avatar__details {
+.ticket__avatar-details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.avatar__name {
+.ticket__avatar-name {
   font-weight: 350;
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
-.avatar__github {
+.ticket__avatar-github {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.avatar__github-icon {
+.ticket__avatar-github-icon {
   width: 20px;
   height: 20px;;
 }
-.avatar__github-username {
+.ticket__avatar-github-username {
   font-size: 1.2rem;
   font-weight: 300;
   color: hsl(244, 23%, 76%);
@@ -399,55 +398,3 @@ background-clip: text;
   color: hsl(245, 28%, 64%);
 }
 
-@media (max-width: 1160px) {
-  .pattern-container{
-    filter: blur(5px);
-  }
-  .pattern__squiggly-top {
-    right: -1%;
-  }
-  .pattern__squiggly-bottom {
-    left: -1%;
-    bottom: -1%;
-  }
-}
-
-@media (max-width: 900px) {
-  .ticket-form__header {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-@media (max-width: 850px) {
-  .ticket-form__title {
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 470px) {
-  .ticket-form__title {
-    font-size: 2rem;
-  }
-  .upload {
-    width: 100%;
-    padding: 0 1rem;
-  }
-  .form-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
-  .upload__container {
-    width: 100%;
-  }
-}
-@media (max-width: 320px) {
-  .ticket-form__title {
-    font-size: 2rem;
-  }
-  .form-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
-  .upload__container {
-    width: 100%;
-  }
-}
