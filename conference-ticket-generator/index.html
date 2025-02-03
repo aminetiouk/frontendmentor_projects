@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="./script.js" defer></script>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <div class="pattern-container">
+      <img
+        src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        alt="pattern squiggly line bottom desktop"
+        class="pattern__squiggly-bottom"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="pattern squiggly line top"
+        class="pattern__squiggly-top"
+      />
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt="pattern circle"
+        class="pattern__circle"
+      />
+      <img
+        src="./assets/images/pattern-lines.svg"
+        alt="pattern lines"
+        class="pattern__lines"
+      />
+    </div>
+    <!-- Logo -->
+    <section class="ticket__logo">
+      <img src="./assets/images/logo-full.svg" alt="Coding Conf" />
+    </section>
+    <!-- Header -->
+    <section class="header">
+      <h1 class="header__title">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="header__description">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </section>
+    <!-- Form starts -->
+    <form id="ticket-form" class="ticket-form">
+      <section class="ticket-form__upload">
+        <label for="file" class="upload__label">
+          <h3 class="upload__title">Upload Avatar</h3>
+          <div class="upload__container">
+            <input
+              type="file"
+              id="file"
+              accept="image/png, image/jpeg"
+              class="upload__input"
+            />
+            <img
+              src="./assets/images/icon-upload.svg"
+              alt="Upload Avatar"
+              class="upload__icon"
+            />
+            <p class="upload__text">Drag and drop or click to upload</p>
+          </div>
+        </label>
+        <div class="upload__info">
+          <div class="info-icon"></div>
+          <p class="upload__description">
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </p>
+        </div>
+        <div class="upload__error hidden">
+          <div class="info-icon"></div>
+          <p class="upload__description">
+            File too large. Please upload a photo under 500KB.
+          </p>
+        </div>
+      </section>
+      <section class="ticket-form__details">
+        <div class="full-name">
+          <label for="full-name" class="label">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            class="full-name__input"
+          />
+        </div>
+        <div class="full-name__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="full-name__description">
+            Please enter your full name (at least 3 characters).
+          </p>
+        </div>
+        <div class="email">
+          <label for="email" class="label">Email Address</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            class="email__input"
+          />
+        </div>
+        <div class="email__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="email__description">Please enter a valid email address.</p>
+        </div>
+        <div class="github-username">
+          <label for="github-username" class="label">Github Username</label>
+          <input
+            type="text"
+            id="github-username"
+            name="github-username"
+            placeholder="@yourusername"
+            class="github-username__input"
+          />
+        </div>
+        <div class="github-username__error hidden-input">
+          <div class="info-icon"></div>
+          <p class="github-username__description">
+            Please enter your Github username (at least 3 characters).
+          </p>
+        </div>
+        <button class="generate-button">Generate My Ticket</button>
+      </section>
+    </form>
+    <!-- Form ends -->
+
+    <!-- Generated tickets starts -->
+    <div id="ticket" class="ticket">
+      <section class="ticket__header">
+        <h1 class="ticket__title">
+          Congrats,
+          <span class="ticket__name"><!-- Full Name --></span>! Your ticket is
+          ready.
+        </h1>
+        <p class="ticket__message">
+          We've emailed your ticket to
+          <span class="ticket__email"><!-- Email Address --></span>
+          and will send updates in the run up to the event.
+        </p>
+      </section>
+      <div class="ticket__container">
+        <img
+          src="./assets/images/pattern-ticket.svg"
+          alt="Ticket"
+          class="ticket__pattern"
+        />
+        <div class="ticket__info">
+          <img
+            src="./assets/images/logo-mark.svg"
+            alt="Coding Conf"
+            class="ticket__icon"
+          />
+          <div class="ticket__event-details">
+            <p class="ticket__event">Coding Conf</p>
+            <p class="ticket__date">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket__avatar">
+          <img
+            src="./assets/images/image-avatar.jpg"
+            alt="Avatar"
+            class="ticket__avatar-image"
+          />
+          <div class="ticket__avatar-details">
+            <p class="ticket__avatar-name"><!-- Full Name --></p>
+            <div class="ticket__avatar-github">
+              <img
+                src="./assets/images/icon-github.svg"
+                alt="Github"
+                class="ticket__avatar-github-icon"
+              />
+              <p class="ticket__avatar-github-username">
+                <!-- Github Username -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ticket__code">
+          #<span class="ticket__code-number"><!-- Code Number --></span>
+        </div>
+      </div>
+    </div>
+    <!-- Generated tickets ends -->
+  </body>
+</html>

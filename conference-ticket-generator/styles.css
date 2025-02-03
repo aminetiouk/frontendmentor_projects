@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf')
+    format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Inconsolata', sans-serif;
+  background-color: hsl(248, 70%, 10%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* PATTERN */
+
+.pattern-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.pattern__circle {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  animation: wiggle-1 15s ease-in-out infinite;
+}
+.pattern__lines {
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.pattern__squiggly-top {
+  position: absolute;
+  object-fit: cover;
+  top: 10%;
+  right: 0;
+}
+
+.pattern__squiggly-bottom {
+  position: absolute;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+}
+
+/* LOGO */
+.ticket__logo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.header__title {
+  font-size: 3.5rem;
+}
+
+.header__description {
+  font-size: 1.3rem;
+  color: hsl(244, 23%, 76%);
+}
+/* TICKET FORM */
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* UPLOAD */
+
+.ticket-form__upload {
+  margin-bottom: 1.5rem;
+}
+
+.upload__title {
+  margin-bottom: .8rem;
+  font-size: .9rem;
+  font-weight: 400;
+  color: hsl(246, 25%, 77%);
+}
+
+.upload__container {
+  background-color: hsl(247, 55%, 15%);
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  border: 1px dashed hsl(245, 15%, 58%);
+  transition: all 0.3s ease;
+}
+
+.upload__container:hover {
+  background-color: hsl(245, 19%, 35%);
+}
+
+.upload__input {
+  display: none;
+}
+
+.upload__icon {
+  background-color: hsl(247, 38%, 28%);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: .4px solid hsl(245, 19%, 49%);
+  padding: 5px;
+}
+.upload__text {
+  font-size: 0.8rem;
+  color: hsl(245, 17%, 72%);
+  margin-top: 0.5rem;
+}
+.upload__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(244, 23%, 76%);
+}
+.upload__error {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: hsl(7, 88%, 67%);
+}
+.hidden {
+  display: none;
+}
+.info-icon {
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask: url('./assets/images/icon-info.svg') no-repeat center;
+  mask: url('./assets/images/icon-info.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.upload__description {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* INPUTS */
+.ticket-form__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-name, .email, .github-username {
+  display: flex;
+  flex-direction: column;
+  margin-top: .8rem;
+  width: 100%;
+  
+}
+
+.full-name__input, .email__input, .github-username__input {
+  background-color: hsl(247, 55%, 15%);
+  border-radius: 10px;
+  border: .4px solid hsl(245, 15%, 58%);
+  padding: 0.5rem;
+  color: #fff;
+  padding: 1rem .9rem;
+  margin-bottom: .5rem;
+  transition: all 0.3s ease;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: hsl(246, 25%, 77%);
+  margin-bottom: .8rem;
+}
+
+.full-name__input:hover, .email__input:hover, .github-username__input:hover {
+  background-color: hsl(245, 19%, 35%);
+}
+
+.full-name__input::placeholder, .email__input::placeholder, .github-username__input::placeholder {
+  color: hsl(245, 17%, 72%);
+  letter-spacing: 1px;
+}
+
+.full-name__input:focus, .email__input:focus, .github-username__input:focus {
+  border: .5px solid hsl(39, 97%, 45%);
+  outline: none;
+}
+
+/* ERROR */
+.full-name__error, .email__error, .github-username__error {
+  color: hsl(7, 88%, 67%);
+  font-size: 0.8rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: .8rem;
+  gap: 0.5rem;
+}
+
+.hidden-input {
+  display: none;
+}
+
+/* GENERATE BUTTON */
+
+.generate-button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: hsl(7, 88%, 67%);
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+  background-color: hsl(7, 71%, 60%);
+}
+
+/* TICKET */
+.header {
+  display: none;
+}
+.ticket-form {
+  display: none;
+}
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  text-align: center;
+}
+.ticket__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 7rem;
+  margin-top: 3rem;
+}
+.ticket__title {
+  font-size: 3.5rem;
+}
+.ticket__name {
+  background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ticket__message {
+  font-size: 1.3rem;
+  color: hsl(244, 23%, 76%);
+  max-width: 450px;
+  line-height: 1.5;
+}
+.ticket__email {
+  color: hsl(7, 88%, 67%);
+}
+
+.ticket__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket__details {
+  position: absolute;
+}
+.ticket__info {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.ticket__icon {
+  width: 40px;
+  height: 40px;
+}
+.ticket__event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ticket__event{
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ticket__date {
+  color: hsl(244, 23%, 76%);
+  font-size: 1.2rem;
+}
+
+/* AVATAR */
+
+.ticket__avatar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 8%;
+  left: 4%;
+}
+.ticket__avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+.ticket__avatar-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ticket__avatar-name {
+  font-weight: 350;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.ticket__avatar-github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ticket__avatar-github-icon {
+  width: 20px;
+  height: 20px;;
+}
+.ticket__avatar-github-username {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: hsl(244, 23%, 76%);
+}
+
+/* TICKET CODE */
+
+.ticket__code {
+  position: absolute;
+  transform: rotate(90deg);
+  right: 1.5%;
+
+  font-size: 2rem;
+  font-weight: 300;
+  color: hsl(245, 28%, 64%);
+}
+
