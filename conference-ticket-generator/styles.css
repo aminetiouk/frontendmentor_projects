@@ -155,8 +155,22 @@ body {
   gap: 0.5rem;
   color: hsl(244, 23%, 76%);
 }
-
-
+.upload__actions {
+  display: none;
+  gap: 1rem;
+  margin-top: 1rem;
+  border: none;
+}
+.remove-image, .change-image {
+  background-color: hsl(7, 88%, 67%);
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
 .upload__error {
   display: flex;
   align-items: center;
