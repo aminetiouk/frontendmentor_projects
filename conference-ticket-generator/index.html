@@ -56,12 +56,12 @@
     <!-- Form starts -->
     <form id="ticket-form" class="ticket-form">
       <section class="ticket-form__upload">
-        <label for="file" class="upload__label">
-          <h3 class="upload__title">Upload Avatar</h3>
+        <label for="file__input">
+          <div class="label">Upload Avatar</div>
           <div class="upload__container">
             <input
               type="file"
-              id="file"
+              id="file__input"
               accept="image/png, image/jpeg"
               class="upload__input"
             />
@@ -70,7 +70,11 @@
               alt="Upload Avatar"
               class="upload__icon"
             />
-            <p class="upload__text">Drag and drop or click to upload</p>
+            <p class="upload__message">Drag and drop or click to upload</p>
+            <div class="upload__actions">
+              <button class="remove-image">Remove image</button>
+              <button class="change-image">Change image</button>
+            </div>
           </div>
         </label>
         <div class="upload__info">
