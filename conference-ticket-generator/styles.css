@@ -109,19 +109,15 @@ body {
 
 .ticket-form__upload {
   margin-bottom: 1.5rem;
+  max-height: 400px;
 }
 
-.upload__title {
-  margin-bottom: .8rem;
-  font-size: .9rem;
-  font-weight: 400;
-  color: hsl(246, 25%, 77%);
-}
 
 .upload__container {
   background-color: hsl(247, 55%, 15%);
   border-radius: 10px;
-  height: 100px;
+  height: auto;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,10 +144,10 @@ body {
   border: .4px solid hsl(245, 19%, 49%);
   padding: 5px;
 }
-.upload__text {
-  font-size: 0.8rem;
+.upload__message {
+  font-size: 0.9rem;
   color: hsl(245, 17%, 72%);
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .upload__info {
   display: flex;
@@ -159,6 +155,8 @@ body {
   gap: 0.5rem;
   color: hsl(244, 23%, 76%);
 }
+
+
 .upload__error {
   display: flex;
   align-items: center;
@@ -268,14 +266,14 @@ body {
 }
 
 /* TICKET */
-.header {
+/* .header {
   display: none;
 }
 .ticket-form {
   display: none;
-}
+} */
 .ticket {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   max-width: 800px;
