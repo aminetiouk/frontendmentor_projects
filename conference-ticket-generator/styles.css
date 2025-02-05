@@ -19,6 +19,10 @@ img {
   height: auto;
 }
 
+button {
+  all: unset;
+}
+
 body {
   font-family: 'Inconsolata', sans-serif;
   background-color: hsl(248, 70%, 10%);
@@ -109,9 +113,8 @@ body {
 
 .ticket-form__upload {
   margin-bottom: 1.5rem;
-  max-height: 400px;
+  width: 100%;
 }
-
 
 .upload__container {
   background-color: hsl(247, 55%, 15%);
@@ -122,7 +125,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
   border: 1px dashed hsl(245, 15%, 58%);
   transition: all 0.3s ease;
@@ -132,8 +135,24 @@ body {
   background-color: hsl(245, 19%, 35%);
 }
 
+.upload__container.error {
+  border-color: hsl(7, 88%, 67%);
+}
+
+.upload__container.dragover {
+  background-color: hsl(245, 19%, 35%);
+  border-color: hsl(7, 88%, 67%);
+}
+
 .upload__input {
   display: none;
+}
+
+.avatar__picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .upload__icon {
@@ -141,7 +160,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  border: .4px solid hsl(245, 19%, 49%);
+  border: 0.4px solid hsl(245, 19%, 49%);
   padding: 5px;
 }
 .upload__message {
@@ -159,24 +178,34 @@ body {
   display: none;
   gap: 1rem;
   margin-top: 1rem;
+  color: hsl(248, 70%, 10%);
   border: none;
 }
-.remove-image, .change-image {
+.remove-image,
+.change-image {
   background-color: hsl(7, 88%, 67%);
   border-radius: 5px;
-  padding: 0.3rem 1rem;
-  font-size: 0.7rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.7px;
   font-weight: 500;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s;
 }
+
+.remove-image:hover,
+.change-image:hover {
+  background-color: hsl(7, 51%, 51%);
+  outline: 0.1px dashed hsl(0, 0%, 100%);
+  color: #ffffff;
+}
+
 .upload__error {
   display: flex;
   align-items: center;
   font-size: 0.8rem;
   gap: 0.5rem;
-  margin-bottom: 1rem;
   color: hsl(7, 88%, 67%);
 }
 .hidden {
@@ -201,57 +230,75 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-.full-name, .email, .github-username {
+.full-name,
+.email,
+.github-username {
   display: flex;
   flex-direction: column;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   width: 100%;
-  
 }
 
-.full-name__input, .email__input, .github-username__input {
+.full-name__input,
+.email__input,
+.github-username__input {
   background-color: hsl(247, 55%, 15%);
   border-radius: 10px;
-  border: .4px solid hsl(245, 15%, 58%);
+  border: 0.4px solid hsl(245, 15%, 58%);
   padding: 0.5rem;
-  color: #fff;
-  padding: 1rem .9rem;
-  margin-bottom: .5rem;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem 0.9rem;
+  margin-bottom: 0.5rem;
   transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .label {
   font-size: 0.9rem;
   color: hsl(246, 25%, 77%);
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
-.full-name__input:hover, .email__input:hover, .github-username__input:hover {
+.full-name__input:hover,
+.email__input:hover,
+.github-username__input:hover {
   background-color: hsl(245, 19%, 35%);
 }
 
-.full-name__input::placeholder, .email__input::placeholder, .github-username__input::placeholder {
+.full-name__input::placeholder,
+.email__input::placeholder,
+.github-username__input::placeholder {
   color: hsl(245, 17%, 72%);
   letter-spacing: 1px;
 }
 
-.full-name__input:focus, .email__input:focus, .github-username__input:focus {
-  border: .5px solid hsl(39, 97%, 45%);
+.full-name__input:focus,
+.email__input:focus,
+.github-username__input:focus {
+  border: 0.5px solid hsl(198, 97%, 45%);
   outline: none;
 }
 
 /* ERROR */
-.full-name__error, .email__error, .github-username__error {
+.full-name__error,
+.email__error,
+.github-username__error {
   color: hsl(7, 88%, 67%);
   font-size: 0.8rem;
   font-weight: 300;
   display: flex;
   align-items: center;
   align-self: flex-start;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   gap: 0.5rem;
+}
+
+.error-input {
+  border-color: hsl(7, 88%, 67%);
 }
 
 .hidden-input {
@@ -263,29 +310,23 @@ body {
 .generate-button {
   width: 100%;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: hsl(7, 88%, 67%);
-  border: none;
+  color: hsl(248, 70%, 10%);
   border-radius: 10px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  letter-spacing: 2px;
+  font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .generate-button:hover {
-  background-color: hsl(7, 71%, 60%);
+  background-color: hsl(7, 63%, 55%);
 }
 
-/* TICKET */
-/* .header {
-  display: none;
-}
-.ticket-form {
-  display: none;
-} */
 .ticket {
   display: none;
   flex-direction: column;
@@ -348,7 +389,7 @@ body {
   gap: 1rem;
 }
 
-.ticket__event{
+.ticket__event {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -372,6 +413,7 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 10px;
+  object-fit: cover;
 }
 .ticket__avatar-details {
   display: flex;
@@ -390,7 +432,7 @@ body {
 }
 .ticket__avatar-github-icon {
   width: 20px;
-  height: 20px;;
+  height: 20px;
 }
 .ticket__avatar-github-username {
   font-size: 1.2rem;
@@ -409,4 +451,3 @@ body {
   font-weight: 300;
   color: hsl(245, 28%, 64%);
 }
-
