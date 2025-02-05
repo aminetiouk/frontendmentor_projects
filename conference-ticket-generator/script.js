@@ -7,6 +7,7 @@ const uploadActions = document.querySelector('.upload__actions');
 const removeImage = document.querySelector('.remove-image');
 const changeImage = document.querySelector('.change-image');
 const generateButton = document.querySelector('.generate-button');
+const uploadContainer = document.querySelector('.upload__container');
 
 // Input fields
 const fullName = document.getElementById('full-name');
@@ -17,7 +18,9 @@ const githubUsername = document.getElementById('github-username');
 const ticketFullName = document.querySelector('.ticket__name');
 const ticketEmail = document.querySelector('.ticket__email');
 const ticketAvatarName = document.querySelector('.ticket__avatar-name');
-const ticketAvatarGithubUsername = document.querySelector('.ticket__avatar-github-username');
+const ticketAvatarGithubUsername = document.querySelector(
+  '.ticket__avatar-github-username'
+);
 const ticketCodeNumber = document.querySelector('.ticket__code-number');
 const ticketAvatarImage = document.querySelector('.ticket__avatar-image');
 
@@ -27,9 +30,8 @@ const generateCode = () => {
   ticketCodeNumber.textContent = code;
 };
 
-avatarPic.addEventListener('change', e => {
-  e.preventDefault();
-  const file = avatarPic.files[0];
+const handleFile = file => {
+  if (!file) return;
   if (file.size > 500 * 1024) {
     uploadInfo.style = 'display: none';
     uploadError.style = 'display: flex';
@@ -40,7 +42,7 @@ avatarPic.addEventListener('change', e => {
   }
   const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     const result = reader.result;
     uploadIcon.src = result;
     uploadIcon.classList.remove('upload__icon');
@@ -51,14 +53,24 @@ avatarPic.addEventListener('change', e => {
   };
 
   reader.readAsDataURL(file);
+};
+
+avatarPic.addEventListener('change', e => {
+  e.preventDefault();
+  const file = avatarPic.files[0];
+  handleFile(file);
 });
 
 removeImage.addEventListener('click', e => {
   e.preventDefault();
   avatarPic.value = '';
+  delete avatarPic.dataset.url;
   uploadIcon.src = './assets/images/icon-upload.svg';
   uploadIcon.classList.remove('avatar__picture');
   uploadIcon.classList.add('upload__icon');
+  uploadActions.style = 'display: none';
+  uploadMessage.style = 'display: flex';
+  
 });
 
 changeImage.addEventListener('click', e => {
@@ -76,9 +88,9 @@ generateButton.addEventListener('click', e => {
   let isValid = true;
 
   if (!avatarPicValue) {
-    uploadInfo.style = 'color: hsl(7, 88%, 67%)';
+    uploadInfo.style.color = 'hsl(7, 88%, 67%)';
     isValid = false;
-  } 
+  }
 
   if (fullNameValue === '') {
     document.querySelector('.full-name__error').style = 'display: flex';
@@ -88,7 +100,7 @@ generateButton.addEventListener('click', e => {
   if (emailValue === '') {
     document.querySelector('.email__error').style = 'display: flex';
     isValid = false;
-  } 
+  }
 
   if (githubUsernameValue === '') {
     document.querySelector('.github-username__error').style = 'display: flex';
@@ -97,21 +109,20 @@ generateButton.addEventListener('click', e => {
 
   // Add event listeners to hide error messages when input fields are filled
   fullName.addEventListener('input', () => {
-    if (fullName.value !== '') {
-      document.querySelector('.full-name__error').style = 'display: none';
-    }
+    document.querySelector('.full-name__error').style.display = fullName.value
+      ? 'none'
+      : 'flex';
   });
 
   email.addEventListener('input', () => {
-    if (email.value !== '') {
-      document.querySelector('.email__error').style = 'display: none';
-    }
+    document.querySelector('.email__error').style.display = email.value
+      ? 'none'
+      : 'flex';
   });
 
   githubUsername.addEventListener('input', () => {
-    if (githubUsername.value !== '') {
-      document.querySelector('.github-username__error').style = 'display: none';
-    }
+    document.querySelector('.github-username__error').style.display =
+      githubUsername.value ? 'none' : 'flex';
   });
 
   if (isValid) {
@@ -125,5 +136,24 @@ generateButton.addEventListener('click', e => {
     document.querySelector('.header').style = 'display: none';
     document.querySelector('.ticket-form').style = 'display: none';
     document.querySelector('.ticket').style = 'display: flex';
+  }
+});
+
+// Drag and Drop functionality
+uploadContainer.addEventListener('dragover', e => {
+  e.preventDefault();
+  uploadContainer.classList.add('dragover');
+});
+
+uploadContainer.addEventListener('dragleave', e => {
+  e.preventDefault();
+  uploadContainer.classList.remove('dragover');
+});
+
+uploadContainer.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadContainer.classList.remove('dragover');
+  if (e.dataTransfer.files.length > 0) {
+    handleFile(e.dataTransfer.files[0]);
   }
 });
