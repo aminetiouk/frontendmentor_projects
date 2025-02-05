@@ -8,6 +8,9 @@ const removeImage = document.querySelector('.remove-image');
 const changeImage = document.querySelector('.change-image');
 const generateButton = document.querySelector('.generate-button');
 const uploadContainer = document.querySelector('.upload__container');
+const fullNameInput = document.querySelector('.full-name__input');
+const emailInput = document.querySelector('.email__input');
+const githubUsernameInput = document.querySelector('.github-username__input');
 
 // Input fields
 const fullName = document.getElementById('full-name');
@@ -89,40 +92,51 @@ generateButton.addEventListener('click', e => {
 
   if (!avatarPicValue) {
     uploadInfo.style.color = 'hsl(7, 88%, 67%)';
+    uploadContainer.classList.add('error');
     isValid = false;
   }
 
   if (fullNameValue === '') {
     document.querySelector('.full-name__error').style = 'display: flex';
+    fullNameInput.classList.add('error-input');
     isValid = false;
   }
 
   if (emailValue === '') {
     document.querySelector('.email__error').style = 'display: flex';
+    emailInput.classList.add('error-input');
     isValid = false;
   }
 
   if (githubUsernameValue === '') {
     document.querySelector('.github-username__error').style = 'display: flex';
+    githubUsernameInput.classList.add('error-input');
     isValid = false;
   }
 
   // Add event listeners to hide error messages when input fields are filled
+  avatarPic.addEventListener('input', () => {
+    uploadContainer.classList.remove('error');
+  });
+
   fullName.addEventListener('input', () => {
     document.querySelector('.full-name__error').style.display = fullName.value
       ? 'none'
       : 'flex';
+    fullNameInput.classList.remove('error-input');
   });
 
   email.addEventListener('input', () => {
     document.querySelector('.email__error').style.display = email.value
       ? 'none'
       : 'flex';
+    emailInput.classList.remove('error-input');
   });
 
   githubUsername.addEventListener('input', () => {
     document.querySelector('.github-username__error').style.display =
       githubUsername.value ? 'none' : 'flex';
+    githubUsernameInput.classList.remove('error-input');
   });
 
   if (isValid) {
@@ -153,6 +167,7 @@ uploadContainer.addEventListener('dragleave', e => {
 uploadContainer.addEventListener('drop', e => {
   e.preventDefault();
   uploadContainer.classList.remove('dragover');
+  uploadContainer.classList.remove('error');
   if (e.dataTransfer.files.length > 0) {
     handleFile(e.dataTransfer.files[0]);
   }
