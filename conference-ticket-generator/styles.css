@@ -14,6 +14,13 @@
   padding: 0;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 0s 600000s,
+    color 0s 600000s !important;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -173,6 +180,9 @@ body {
   align-items: center;
   gap: 0.5rem;
   color: hsl(244, 23%, 76%);
+}
+.upload__info.error-info {
+  color: hsl(7, 88%, 67%);
 }
 .upload__actions {
   display: none;
