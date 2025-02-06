@@ -29,51 +29,65 @@ const ticketAvatarImage = document.querySelector('.ticket__avatar-image');
 
 // Generate Number Code
 const generateCode = () => {
-  const code = Math.floor(Math.random() * 100000);
+  const code = String(Math.floor(10000 + Math.random() * 90000));
   ticketCodeNumber.textContent = code;
 };
 
 const handleFile = file => {
   if (!file) return;
-  if (file.size > 500 * 1024) {
-    uploadInfo.style = 'display: none';
-    uploadError.style = 'display: flex';
+  if (file.size > 500000) {
+    uploadInfo.style.display = 'none';
+    uploadError.style.display = 'flex';
+    uploadContainer.classList.add('error');
     return;
   } else {
-    uploadInfo.style = 'display: flex';
-    uploadError.style = 'display: none';
+    uploadInfo.style.display = 'flex';
+    uploadError.style.display = 'none';
+    uploadContainer.classList.remove('error'); 
   }
   const reader = new FileReader();
+  console.log(reader)
+
 
   reader.onload = () => {
     const result = reader.result;
-    uploadIcon.src = result;
-    uploadIcon.classList.remove('upload__icon');
-    uploadIcon.classList.add('avatar__picture');
+
+     // Set the uploaded image
+    if (uploadIcon) {
+      uploadIcon.src = result;
+      uploadIcon.classList.remove('upload__icon');
+      uploadIcon.classList.add('avatar__picture');
+    }
     uploadMessage.classList.add('hidden');
-    uploadActions.style = 'display: flex';
-    avatarPic.dataset.url = result; // Store the data URL in a data attribute
+    uploadActions.style.display = 'flex';
+
+    // Store the file URL in dataset for later use
+    avatarPic.dataset.url = result;
+    console.log(avatarPic.dataset.url);
   };
 
   reader.readAsDataURL(file);
 };
 
-avatarPic.addEventListener('change', e => {
-  e.preventDefault();
-  const file = avatarPic.files[0];
-  handleFile(file);
-});
+if (avatarPic) {
+  avatarPic.addEventListener('change', e => {
+    e.preventDefault();
+    const file = avatarPic.files[0];
+    handleFile(file);
+  });
+}
 
 removeImage.addEventListener('click', e => {
   e.preventDefault();
   avatarPic.value = '';
-  delete avatarPic.dataset.url;
+  if (avatarPic && avatarPic.dataset) {
+    delete avatarPic.dataset.url;
+  }
   uploadIcon.src = './assets/images/icon-upload.svg';
   uploadIcon.classList.remove('avatar__picture');
   uploadIcon.classList.add('upload__icon');
-  uploadActions.style = 'display: none';
-  uploadMessage.style = 'display: flex';
-  
+  uploadActions.style.display = 'none';
+  uploadMessage.style.display = 'flex';
 });
 
 changeImage.addEventListener('click', e => {
@@ -81,17 +95,19 @@ changeImage.addEventListener('click', e => {
   avatarPic.click();
 });
 
+// Generate ticket
+
 generateButton.addEventListener('click', e => {
   e.preventDefault();
   const fullNameValue = fullName.value;
   const emailValue = email.value;
   const githubUsernameValue = githubUsername.value;
-  const avatarPicValue = avatarPic.value;
+  const avatarPicValue = avatarPic.dataset.url;
 
   let isValid = true;
 
   if (!avatarPicValue) {
-    uploadInfo.style.color = 'hsl(7, 88%, 67%)';
+    uploadInfo.classList.add('error-info');
     uploadContainer.classList.add('error');
     isValid = false;
   }
@@ -114,36 +130,11 @@ generateButton.addEventListener('click', e => {
     isValid = false;
   }
 
-  // Add event listeners to hide error messages when input fields are filled
-  avatarPic.addEventListener('input', () => {
-    uploadContainer.classList.remove('error');
-  });
-
-  fullName.addEventListener('input', () => {
-    document.querySelector('.full-name__error').style.display = fullName.value
-      ? 'none'
-      : 'flex';
-    fullNameInput.classList.remove('error-input');
-  });
-
-  email.addEventListener('input', () => {
-    document.querySelector('.email__error').style.display = email.value
-      ? 'none'
-      : 'flex';
-    emailInput.classList.remove('error-input');
-  });
-
-  githubUsername.addEventListener('input', () => {
-    document.querySelector('.github-username__error').style.display =
-      githubUsername.value ? 'none' : 'flex';
-    githubUsernameInput.classList.remove('error-input');
-  });
-
   if (isValid) {
     ticketFullName.textContent = fullNameValue;
     ticketAvatarName.textContent = fullNameValue;
     ticketEmail.textContent = emailValue;
-    ticketAvatarImage.src = avatarPic.dataset.url;
+    ticketAvatarImage.src = avatarPic.dataset.url || './assets/images/image-avatar.jpg';
     ticketAvatarGithubUsername.textContent = githubUsernameValue;
 
     generateCode();
@@ -151,6 +142,32 @@ generateButton.addEventListener('click', e => {
     document.querySelector('.ticket-form').style = 'display: none';
     document.querySelector('.ticket').style = 'display: flex';
   }
+});
+
+// Add event listeners to hide error messages when input fields are filled
+avatarPic.addEventListener('input', () => {
+  uploadInfo.classList.remove('error-info');
+  uploadContainer.classList.remove('error');
+});
+
+fullName.addEventListener('input', () => {
+  document.querySelector('.full-name__error').style.display = fullName.value
+    ? 'none'
+    : 'flex';
+  fullNameInput.classList.remove('error-input');
+});
+
+email.addEventListener('input', () => {
+  document.querySelector('.email__error').style.display = email.value
+    ? 'none'
+    : 'flex';
+  emailInput.classList.remove('error-input');
+});
+
+githubUsername.addEventListener('input', () => {
+  document.querySelector('.github-username__error').style.display =
+    githubUsername.value ? 'none' : 'flex';
+  githubUsernameInput.classList.remove('error-input');
 });
 
 // Drag and Drop functionality
@@ -168,6 +185,8 @@ uploadContainer.addEventListener('drop', e => {
   e.preventDefault();
   uploadContainer.classList.remove('dragover');
   uploadContainer.classList.remove('error');
+  uploadInfo.classList.remove('error-info');
+  uploadError.style.display = 'none';
   if (e.dataTransfer.files.length > 0) {
     handleFile(e.dataTransfer.files[0]);
   }
