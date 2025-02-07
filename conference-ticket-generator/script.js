@@ -231,3 +231,31 @@ document.querySelector('.reset-ticket').addEventListener('click', e => {
   document.querySelector('.ticket-form').style = 'display: flex';
   document.querySelector('.ticket').style = 'display: none';
 });
+
+// Download ticket as PDF
+const generatePDF = () => {
+  const { jsPDF } = window.jspdf;
+
+  if (!ticketContainer) {
+    alert('No ticket found!');
+    return;
+  }
+  ticketEvent.classList.add('color');
+  ticketAvatarName.classList.add('color');
+
+  html2canvas(ticketContainer, { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'mm', 'a4');
+
+    const imgWidth = 208;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 10, imgWidth, imgHeight);
+    pdf.save('ticket.pdf');
+  });
+};
+
+document.querySelector('.download__ticket-pdf').addEventListener('click', e => {
+  e.preventDefault();
+  generatePDF();
+});
