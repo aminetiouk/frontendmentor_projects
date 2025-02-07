@@ -523,3 +523,11 @@ body {
 .color {
   color: hsl(247, 38%, 28%);
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .pattern__squiggly-bottom {
+    width: 85vw;
+    left: -10%;
+  }
+}
