@@ -59,6 +59,12 @@ const resetForm = () => {
   ticketAvatarName.classList.remove('color');
 };
 
+// Validate email
+const validateEmail = email => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+};
+
 // Handle file upload
 const handleFile = file => {
   if (!file) return;
