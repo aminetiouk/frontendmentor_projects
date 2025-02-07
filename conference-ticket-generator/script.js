@@ -65,6 +65,11 @@ const validateEmail = email => {
   return re.test(String(email).toLowerCase());
 };
 
+// Validate github username
+const validateGithubUsername = username => {
+  return username.startsWith('@');
+};
+
 // Handle file upload
 const handleFile = file => {
   if (!file) return;
