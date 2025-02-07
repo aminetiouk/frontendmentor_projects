@@ -99,7 +99,7 @@ body {
   gap: 1.5rem;
   margin-bottom: clamp(2rem, 10vw, 4rem);
   margin-top: clamp(1rem, 5vw, 3rem);
-  padding: 0 2.3rem;
+  padding: 0 1rem;
   text-align: center;
   max-width: 800px;
 }
