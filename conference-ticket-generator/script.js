@@ -259,3 +259,30 @@ document.querySelector('.download__ticket-pdf').addEventListener('click', e => {
   e.preventDefault();
   generatePDF();
 });
+
+// Download ticket as PNG
+const downloadPNG = () => {
+  if (!ticketContainer) {
+    alert('No ticket found!');
+    return;
+  }
+
+  html2canvas(ticketContainer, {
+    backgroundColor: null,
+    scale: 2
+  }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+
+    const link = document.createElement('a');
+    link.href = imgData;
+    link.download = 'ticket.png';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+};
+
+document
+  .querySelector('.download__ticket-png')
+  .addEventListener('click', downloadPNG);
