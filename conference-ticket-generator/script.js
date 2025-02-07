@@ -201,6 +201,11 @@ const generateTicket = e => {
 };
 
 generateButton.addEventListener('click', generateTicket);
+document.addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    generateTicket(e);
+  }
+});
 
 // Add event listeners to hide error messages when input fields are filled
 avatarPic.addEventListener('input', () => {
