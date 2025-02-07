@@ -39,6 +39,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* PATTERN */
@@ -55,6 +56,8 @@ body {
 }
 .pattern__circle {
   position: absolute;
+  object-fit: cover;
+  width: 20vw;
   top: 50%;
   left: 60%;
   animation: wiggle-1 15s ease-in-out infinite;
@@ -68,13 +71,15 @@ body {
 .pattern__squiggly-top {
   position: absolute;
   object-fit: cover;
+  width: 40vw;
   top: 10%;
   right: 0;
 }
 
 .pattern__squiggly-bottom {
-  position: absolute;
+  position: fixed;
   object-fit: cover;
+  width: 50vw;
   bottom: 0;
   left: 0;
 }
@@ -92,18 +97,19 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 4rem;
-  margin-top: 3rem;
+  margin-bottom: clamp(2rem, 10vw, 4rem);
+  margin-top: clamp(1rem, 5vw, 3rem);
+  padding: 0 1rem;
   text-align: center;
   max-width: 800px;
 }
 
 .header__title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 .header__description {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 5vw, 1.3rem);
   color: hsl(244, 23%, 76%);
 }
 /* TICKET FORM */
@@ -111,8 +117,8 @@ body {
 .ticket-form {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
+  padding: 0 1rem 1rem 1rem;
   max-width: 450px;
 }
 
@@ -159,6 +165,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 8px;
+  border: 1px solid hsl(7, 86%, 67%);;
   object-fit: cover;
 }
 
@@ -211,12 +218,13 @@ body {
   color: #ffffff;
 }
 
-.upload__error {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
+.upload__error-size, .upload__error-type {
+  display: none;
+  font-size: 0.9rem;
+  font-weight: 300;
   gap: 0.5rem;
   color: hsl(7, 88%, 67%);
+  align-items: center;
 }
 .hidden {
   display: none;
@@ -229,10 +237,6 @@ body {
   mask: url('./assets/images/icon-info.svg') no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
-}
-.upload__description {
-  font-size: 0.9rem;
-  font-weight: 300;
 }
 
 /* INPUTS */
@@ -268,7 +272,8 @@ body {
 }
 
 .label {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  letter-spacing: .5px;
   color: hsl(246, 25%, 77%);
   margin-bottom: 0.8rem;
 }
@@ -343,17 +348,20 @@ body {
   align-items: center;
   max-width: 800px;
   text-align: center;
+  width: 100%;
 }
 .ticket__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  margin-bottom: 7rem;
-  margin-top: 3rem;
+  gap: clamp(1rem, 5vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 7rem);
+  margin-top: clamp(0, 5vw, 3rem);
+  padding: 0 1rem
 }
+
 .ticket__title {
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 6vw, 3.5rem);
 }
 .ticket__name {
   background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
@@ -362,7 +370,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .ticket__message {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   color: hsl(244, 23%, 76%);
   max-width: 450px;
   line-height: 1.5;
@@ -376,37 +384,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 1rem;
 }
 
-.ticket__details {
-  position: absolute;
-}
 .ticket__info {
   display: flex;
-  gap: 1rem;
+  gap: clamp(.4rem, 3vw, 1rem);
   position: absolute;
-  top: 10%;
+  top: 13%;
   left: 5%;
 }
 .ticket__icon {
-  width: 40px;
-  height: 40px;
+  width: clamp(20px, 8vw, 40px);
+  height: clamp(20px, 8vw, 40px);
 }
 .ticket__event-details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  gap: clamp(0.5rem, 3vw, 1.4rem);
 }
 
 .ticket__event {
-  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
   font-weight: 700;
-  letter-spacing: 1px;
+  text-align: start;
+  line-height: .6;
 }
 .ticket__date {
   color: hsl(244, 23%, 76%);
-  font-size: 1.2rem;
+  font-size: clamp(.9rem, 3vw, 1.2rem);
 }
 
 /* AVATAR */
@@ -414,38 +421,39 @@ body {
 .ticket__avatar {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(.5rem, 3vw, 1rem);
   position: absolute;
   bottom: 8%;
   left: 4%;
 }
 .ticket__avatar-image {
-  width: 80px;
-  height: 80px;
+  width: clamp(50px, 10vw, 80px);
+  height: clamp(50px, 10vw, 80px);
   border-radius: 10px;
   object-fit: cover;
 }
 .ticket__avatar-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(.2rem, 1vw, .5rem);
 }
 .ticket__avatar-name {
   font-weight: 350;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
+  text-align: start;
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 .ticket__avatar-github {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: clamp(.2rem, 1vw, .5rem);
 }
 .ticket__avatar-github-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 .ticket__avatar-github-username {
-  font-size: 1.2rem;
+  font-size: clamp(.9rem, 3vw, 1.2rem);
   font-weight: 300;
   color: hsl(244, 23%, 76%);
 }
@@ -456,8 +464,70 @@ body {
   position: absolute;
   transform: rotate(90deg);
   right: 1.5%;
-
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 5vw, 2rem);
   font-weight: 300;
   color: hsl(245, 28%, 64%);
+}
+
+.ticket__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  margin-top: clamp(3rem, 5vw, 5rem);
+  width: 100%;
+}
+
+.reset-ticket, .download__ticket-pdf, .download__ticket-png {
+  background-color: hsl(7, 88%, 67%);
+  color: hsl(247, 55%, 15%);
+  border-radius: 500px;
+  padding: 1rem;
+  cursor: pointer;
+  width: clamp(70px, 10vw, 80px);
+  height: clamp(70px, 10vw, 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  box-shadow: 0 6px 0 hsl(9, 35%, 31%);
+}
+
+.download__ticket-pdf, .download__ticket-png {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.download__ticket-pdf span, .download__ticket-png span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.fa-download {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+}
+.fa-redo-alt {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+}
+
+.reset-ticket:hover, .download__ticket-pdf:hover, .download__ticket-png:hover {
+  background-color: hsl(7, 60%, 58%);
+  color: hsl(0, 0%, 100%);
+}
+
+.reset-ticket:active, .download__ticket-pdf:active, .download__ticket-png:active {
+  transform: translateY(6px);
+  box-shadow: none;
+}
+
+.color {
+  color: hsl(247, 38%, 28%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .pattern__squiggly-bottom {
+    width: 85vw;
+    left: -10%;
+  }
 }

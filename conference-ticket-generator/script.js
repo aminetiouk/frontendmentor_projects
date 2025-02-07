@@ -2,7 +2,8 @@ const avatarPic = document.querySelector('.upload__input');
 const uploadIcon = document.querySelector('.upload__icon');
 const uploadMessage = document.querySelector('.upload__message');
 const uploadInfo = document.querySelector('.upload__info');
-const uploadError = document.querySelector('.upload__error');
+const uploadErrorSize = document.querySelector('.upload__error-size');
+const uploadErrorType = document.querySelector('.upload__error-type');
 const uploadActions = document.querySelector('.upload__actions');
 const removeImage = document.querySelector('.remove-image');
 const changeImage = document.querySelector('.change-image');
@@ -18,6 +19,8 @@ const email = document.getElementById('email');
 const githubUsername = document.getElementById('github-username');
 
 // Ticket fields
+const ticketContainer = document.querySelector('.ticket__container');
+const ticketEvent = document.querySelector('.ticket__event');
 const ticketFullName = document.querySelector('.ticket__name');
 const ticketEmail = document.querySelector('.ticket__email');
 const ticketAvatarName = document.querySelector('.ticket__avatar-name');
@@ -33,26 +36,72 @@ const generateCode = () => {
   ticketCodeNumber.textContent = code;
 };
 
+// Reset form
+const resetForm = () => {
+  fullName.value = '';
+  email.value = '';
+  githubUsername.value = '';
+  avatarPic.value = '';
+  uploadIcon.src = './assets/images/icon-upload.svg';
+  uploadIcon.classList.remove('avatar__picture');
+  uploadIcon.classList.add('upload__icon');
+  uploadActions.style.display = 'none';
+  uploadMessage.style.display = 'flex';
+  uploadInfo.classList.remove('error-info');
+  uploadContainer.classList.remove('error');
+  document.querySelector('.full-name__error').style = 'display: none';
+  document.querySelector('.email__error').style = 'display: none';
+  document.querySelector('.github-username__error').style = 'display: none';
+  fullNameInput.classList.remove('error-input');
+  emailInput.classList.remove('error-input');
+  githubUsernameInput.classList.remove('error-input');
+  ticketEvent.classList.remove('color');
+  ticketAvatarName.classList.remove('color');
+};
+
+// Validate email
+const validateEmail = email => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+};
+
+// Validate github username
+const validateGithubUsername = username => {
+  return username.startsWith('@');
+};
+
+// Handle file upload
 const handleFile = file => {
   if (!file) return;
-  if (file.size > 500000) {
+  const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+
+  if (!allowedTypes.includes(file.type)) {
     uploadInfo.style.display = 'none';
-    uploadError.style.display = 'flex';
+    uploadErrorType.style.display = 'flex';
     uploadContainer.classList.add('error');
     return;
   } else {
     uploadInfo.style.display = 'flex';
-    uploadError.style.display = 'none';
-    uploadContainer.classList.remove('error'); 
+    uploadErrorType.style.display = 'none';
+    uploadContainer.classList.remove('error');
+  }
+
+  if (file.size > 500000) {
+    uploadInfo.style.display = 'none';
+    uploadErrorSize.style.display = 'flex';
+    uploadContainer.classList.add('error');
+    return;
+  } else {
+    uploadInfo.style.display = 'flex';
+    uploadErrorSize.style.display = 'none';
+    uploadContainer.classList.remove('error');
   }
   const reader = new FileReader();
-  console.log(reader)
-
 
   reader.onload = () => {
     const result = reader.result;
 
-     // Set the uploaded image
+    // Set the uploaded image
     if (uploadIcon) {
       uploadIcon.src = result;
       uploadIcon.classList.remove('upload__icon');
@@ -97,7 +146,7 @@ changeImage.addEventListener('click', e => {
 
 // Generate ticket
 
-generateButton.addEventListener('click', e => {
+const generateTicket = e => {
   e.preventDefault();
   const fullNameValue = fullName.value;
   const emailValue = email.value;
@@ -118,29 +167,43 @@ generateButton.addEventListener('click', e => {
     isValid = false;
   }
 
-  if (emailValue === '') {
+  if (emailValue === '' || !validateEmail(emailValue)) {
     document.querySelector('.email__error').style = 'display: flex';
     emailInput.classList.add('error-input');
     isValid = false;
   }
 
-  if (githubUsernameValue === '') {
+  if (
+    githubUsernameValue === '' ||
+    !validateGithubUsername(githubUsernameValue)
+  ) {
     document.querySelector('.github-username__error').style = 'display: flex';
     githubUsernameInput.classList.add('error-input');
     isValid = false;
   }
 
   if (isValid) {
-    ticketFullName.textContent = fullNameValue;
-    ticketAvatarName.textContent = fullNameValue;
+    const capitalizeFirstLetter = string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+    ticketFullName.textContent = capitalizeFirstLetter(fullNameValue);
+    ticketAvatarName.textContent = capitalizeFirstLetter(fullNameValue);
     ticketEmail.textContent = emailValue;
-    ticketAvatarImage.src = avatarPic.dataset.url || './assets/images/image-avatar.jpg';
+    ticketAvatarImage.src =
+      avatarPic.dataset.url || './assets/images/image-avatar.jpg';
     ticketAvatarGithubUsername.textContent = githubUsernameValue;
 
     generateCode();
     document.querySelector('.header').style = 'display: none';
     document.querySelector('.ticket-form').style = 'display: none';
     document.querySelector('.ticket').style = 'display: flex';
+  }
+};
+
+generateButton.addEventListener('click', generateTicket);
+document.addEventListener('keypress', e => {
+  if (e.key === 'Enter') {
+    generateTicket(e);
   }
 });
 
@@ -186,8 +249,72 @@ uploadContainer.addEventListener('drop', e => {
   uploadContainer.classList.remove('dragover');
   uploadContainer.classList.remove('error');
   uploadInfo.classList.remove('error-info');
-  uploadError.style.display = 'none';
+  uploadErrorSize.style.display = 'none';
   if (e.dataTransfer.files.length > 0) {
     handleFile(e.dataTransfer.files[0]);
   }
 });
+
+// Reset form
+document.querySelector('.reset-ticket').addEventListener('click', e => {
+  e.preventDefault();
+  resetForm();
+  document.querySelector('.header').style = 'display: flex';
+  document.querySelector('.ticket-form').style = 'display: flex';
+  document.querySelector('.ticket').style = 'display: none';
+});
+
+// Download ticket as PDF
+const generatePDF = () => {
+  const { jsPDF } = window.jspdf;
+
+  if (!ticketContainer) {
+    alert('No ticket found!');
+    return;
+  }
+  ticketEvent.classList.add('color');
+  ticketAvatarName.classList.add('color');
+
+  html2canvas(ticketContainer, { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'mm', 'a4');
+
+    const imgWidth = 208;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 10, imgWidth, imgHeight);
+    pdf.save('ticket.pdf');
+  });
+};
+
+document.querySelector('.download__ticket-pdf').addEventListener('click', e => {
+  e.preventDefault();
+  generatePDF();
+});
+
+// Download ticket as PNG
+const downloadPNG = () => {
+  if (!ticketContainer) {
+    alert('No ticket found!');
+    return;
+  }
+
+  html2canvas(ticketContainer, {
+    backgroundColor: null,
+    scale: 2
+  }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+
+    const link = document.createElement('a');
+    link.href = imgData;
+    link.download = 'ticket.png';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+};
+
+document
+  .querySelector('.download__ticket-png')
+  .addEventListener('click', downloadPNG);

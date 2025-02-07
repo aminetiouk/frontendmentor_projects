@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <meta
+      name="description"
+      content="Frontend Mentor | Conference ticket generator"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, frontend, practice, and challenges"
+    />
+    <meta name="author" content="Frontend Mentor" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -12,6 +24,8 @@
       href="./assets/images/favicon-32x32.png"
     />
     <script src="./script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 
     <link rel="stylesheet" href="./styles.css" />
 
@@ -83,11 +97,17 @@
             Upload your photo (JPG or PNG, max size: 500KB).
           </p>
         </div>
-        <div class="upload__error hidden">
+        <div class="upload__error-size">
           <div class="info-icon"></div>
-          <p class="upload__description">
+          <span class="upload__size-message">
             File too large. Please upload a photo under 500KB.
-          </p>
+          </span>
+        </div>
+        <div class="upload__error-type">
+          <div class="info-icon"></div>
+          <span class="error__type-message">
+            Invalid file type. Only JPG, JPEG, and PNG are allowed.
+          </span>
         </div>
       </section>
       <section class="ticket-form__details">
@@ -194,6 +214,19 @@
         </div>
         <div class="ticket__code">
           #<span class="ticket__code-number"><!-- Code Number --></span>
+        </div>
+      </div>
+      <div class="ticket__actions">
+        <div class="download__ticket-pdf">
+          <i class="fas fa-download"></i>
+          <span>PDF</span>
+        </div>
+        <div class="download__ticket-png">
+          <i class="fas fa-download"></i>
+          <span>PNG</span>
+        </div>
+        <div class="reset-ticket">
+          <i class="fas fa-redo-alt"></i>
         </div>
       </div>
     </div>

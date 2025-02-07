@@ -15,6 +15,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [Contact Form](#contact-form)
   - [FAQ Accordion](#faq-accordion)
   - [Results Summary Component](#results-summary-component)
+  - [Conference Ticket Generator](#conference-ticket-generator)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -90,6 +91,12 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `results-summary-component`
 - **Repository**: [Results Summary Component](https://github.com/aminetiouk/frontendmentor_projects/tree/results-summary/results-summary)
 - [Results Summary Component Live Site](https://results-summary-two-virid.vercel.app/)
+
+### Conference Ticket Generator
+- **Description**: This project is a responsive conference ticket generator that allows users to create and customize tickets for events. Users can input event details, attendee information, and generate a printable ticket.
+- **Technology Stack**: HTML, CSS, JavaScript
+- **Branch**: `conference-ticket-generator`
+- **Repository**: [Conference Ticket Generator](https://github.com/aminetiouk/frontendmentor_projects/tree/conference-ticket-generator)
 
 ## Getting Started
 
