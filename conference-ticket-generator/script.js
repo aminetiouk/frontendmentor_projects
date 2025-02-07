@@ -73,6 +73,19 @@ const validateGithubUsername = username => {
 // Handle file upload
 const handleFile = file => {
   if (!file) return;
+  const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+
+  if (!allowedTypes.includes(file.type)) {
+    uploadInfo.style.display = 'none';
+    uploadErrorType.style.display = 'flex';
+    uploadContainer.classList.add('error');
+    return;
+  } else {
+    uploadInfo.style.display = 'flex';
+    uploadErrorType.style.display = 'none';
+    uploadContainer.classList.remove('error');
+  }
+
   if (file.size > 500000) {
     uploadInfo.style.display = 'none';
     uploadErrorSize.style.display = 'flex';
@@ -160,7 +173,10 @@ const generateTicket = e => {
     isValid = false;
   }
 
-  if (githubUsernameValue === '' || !validateGithubUsername(githubUsernameValue)) {
+  if (
+    githubUsernameValue === '' ||
+    !validateGithubUsername(githubUsernameValue)
+  ) {
     document.querySelector('.github-username__error').style = 'display: flex';
     githubUsernameInput.classList.add('error-input');
     isValid = false;
