@@ -468,3 +468,58 @@ body {
   font-weight: 300;
   color: hsl(245, 28%, 64%);
 }
+
+.ticket__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  margin-top: clamp(3rem, 5vw, 5rem);
+  width: 100%;
+}
+
+.reset-ticket, .download__ticket-pdf, .download__ticket-png {
+  background-color: hsl(7, 88%, 67%);
+  color: hsl(247, 55%, 15%);
+  border-radius: 500px;
+  padding: 1rem;
+  cursor: pointer;
+  width: clamp(70px, 10vw, 80px);
+  height: clamp(70px, 10vw, 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  box-shadow: 0 6px 0 hsl(9, 35%, 31%);
+}
+
+.download__ticket-pdf, .download__ticket-png {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.download__ticket-pdf span, .download__ticket-png span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.fa-download {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+}
+.fa-redo-alt {
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+}
+
+.reset-ticket:hover, .download__ticket-pdf:hover, .download__ticket-png:hover {
+  background-color: hsl(7, 60%, 58%);
+  color: hsl(0, 0%, 100%);
+}
+
+.reset-ticket:active, .download__ticket-pdf:active, .download__ticket-png:active {
+  transform: translateY(6px);
+  box-shadow: none;
+}
+
+.color {
+  color: hsl(247, 38%, 28%);
+}
