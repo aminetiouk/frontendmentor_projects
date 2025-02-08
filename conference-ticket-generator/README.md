@@ -14,6 +14,10 @@ Through this project, I learned a lot, including how to implement file uploads a
 - Download tickets as PDF
 - Download tickets as PNG
 
+## Live Site
+
+You can view the live site [here](https://conference-ticket-generator-psi.vercel.app/).
+
 ## Technologies Used
 
 - HTML
