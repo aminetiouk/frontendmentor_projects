@@ -27,7 +27,12 @@ img {
 }
 
 button {
-  all: unset;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 body {
@@ -37,18 +42,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* PATTERN */
 
 .pattern-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: -1;
@@ -65,13 +69,13 @@ body {
 .pattern__lines {
   position: absolute;
   object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .pattern__squiggly-top {
   position: absolute;
   object-fit: cover;
-  width: 40vw;
+  width: 35vw;
   top: 10%;
   right: 0;
 }
@@ -82,6 +86,7 @@ body {
   width: 50vw;
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 
 /* LOGO */
@@ -97,8 +102,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: clamp(2rem, 10vw, 4rem);
-  margin-top: clamp(1rem, 5vw, 3rem);
+  margin-bottom: clamp(1rem, 8vw, 3rem);
   padding: 0 1rem;
   text-align: center;
   max-width: 800px;
@@ -187,16 +191,27 @@ body {
   align-items: center;
   gap: 0.5rem;
   color: hsl(244, 23%, 76%);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.info-icon {
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  -webkit-mask: url('./assets/images/icon-info.svg') no-repeat center;
+  mask: url('./assets/images/icon-info.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 .upload__info.error-info {
-  color: hsl(7, 88%, 67%);
+  color: hsl(7, 92%, 58%);
 }
 .upload__actions {
   display: none;
   gap: 1rem;
   margin-top: 1rem;
   color: hsl(248, 70%, 10%);
-  border: none;
 }
 .remove-image,
 .change-image {
@@ -214,30 +229,23 @@ body {
 .remove-image:hover,
 .change-image:hover {
   background-color: hsl(7, 51%, 51%);
-  outline: 0.1px dashed hsl(0, 0%, 100%);
   color: #ffffff;
+  transform: scale(1.05);
 }
 
 .upload__error-size, .upload__error-type {
   display: none;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   gap: 0.5rem;
-  color: hsl(7, 88%, 67%);
+  color: hsl(7, 92%, 58%);
   align-items: center;
+  line-height: 1.2;
 }
 .hidden {
   display: none;
 }
-.info-icon {
-  width: 20px;
-  height: 20px;
-  background-color: currentColor;
-  -webkit-mask: url('./assets/images/icon-info.svg') no-repeat center;
-  mask: url('./assets/images/icon-info.svg') no-repeat center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
+
 
 /* INPUTS */
 .ticket-form__details {
@@ -294,7 +302,7 @@ body {
 .full-name__input:focus,
 .email__input:focus,
 .github-username__input:focus {
-  border: 0.5px solid hsl(198, 97%, 45%);
+  border: 0.5px solid hsl(64, 97%, 45%);
   outline: none;
 }
 
@@ -302,14 +310,16 @@ body {
 .full-name__error,
 .email__error,
 .github-username__error {
-  color: hsl(7, 88%, 67%);
-  font-size: 0.8rem;
-  font-weight: 300;
+  color: hsl(7, 92%, 58%);
+  font-size: 0.9rem;
+  font-weight: 400;
   display: flex;
   align-items: center;
   align-self: flex-start;
   margin-bottom: 0.8rem;
+  line-height: 1.2;
   gap: 0.5rem;
+  z-index: 10;
 }
 
 .error-input {
