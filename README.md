@@ -97,7 +97,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Technology Stack**: HTML, CSS, JavaScript
 - **Branch**: `conference-ticket-generator`
 - **Repository**: [Conference Ticket Generator](https://github.com/aminetiouk/frontendmentor_projects/tree/conference-ticket-generator)
-- [Conference Ticket Generator Live Site](https://conference-ticket-generator-psi.vercel.app/)
+- [Conference Ticket Generator Live Site](https://conference-ticket-generator-alpha.vercel.app/)
 
 ## Getting Started
 
