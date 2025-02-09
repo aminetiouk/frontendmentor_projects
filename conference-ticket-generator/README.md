@@ -16,7 +16,7 @@ Through this project, I learned a lot, including how to implement file uploads a
 
 ## Live Site
 
-You can view the live site [here](https://conference-ticket-generator-psi.vercel.app/).
+You can view the live site [here](https://conference-ticket-generator-alpha.vercel.app/).
 
 ## Technologies Used
 
