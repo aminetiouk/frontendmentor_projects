@@ -39,8 +39,7 @@ body {
 .age {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .day_input label, .month_input label, .year_input label {
@@ -48,12 +47,13 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1rem;
+  color: #333;
 }
 
 .day_input input, .month_input input, .year_input input {
   width: 100%;
   padding: clamp(.5rem, 2vw, 1rem);
-  border: .4px solid #c7c7c7;
+  border: 1px solid #c7c7c7;
   border-radius: 5px;
   font-size: clamp(.6rem, 3vw, 1.5rem);
   font-weight: 700;
@@ -61,33 +61,39 @@ body {
 }
 
 .day_input input:focus, .month_input input:focus, .year_input input:focus {
-  outline: 1px solid hsl(264, 76%, 52%);
+  border-color: hsl(264, 76%, 52%);
   cursor: text;
 }
 
-.required-field {
+.required__field-day, .required__field-month, .required__field-year {
   display: none;
-  margin-top: .3rem;
   color: rgb(217, 89, 89);
-  font-size: 0.7rem;
+  font-size: clamp(.6rem, 1.5vw, .8rem);
   font-weight: 400;
   font-style: italic;
+  margin-top: .5rem;
 }
 
-.validation {
+.valid__day, .valid__month, .valid__year {
   display: none;
   color: rgb(217, 89, 89);
-  font-size: 0.7rem;
+  font-size: clamp(.6rem, 1.5vw, .8rem);
   font-weight: 400;
   font-style: italic;
+  margin-top: .5rem;
 }
 
-.validation-date {
+.active {
+  display: flex;
+}
+
+.valid__date {
   display: none;
   color: rgb(217, 89, 89);
-  font-size: 0.7rem;
+  font-size: clamp(.6rem, 1.5vw, .8rem);
   font-weight: 400;
   font-style: italic;
+  margin-top: .5rem;
 }
 
 .calculate {
