@@ -16,6 +16,7 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
   - [FAQ Accordion](#faq-accordion)
   - [Results Summary Component](#results-summary-component)
   - [Conference Ticket Generator](#conference-ticket-generator)
+  - [Age Calculator](#age-calculator)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Tools Used](#tools-used)
@@ -98,6 +99,13 @@ Welcome to my **Frontend Mentor Projects** repository! This repo contains all th
 - **Branch**: `conference-ticket-generator`
 - **Repository**: [Conference Ticket Generator](https://github.com/aminetiouk/frontendmentor_projects/tree/conference-ticket-generator)
 - [Conference Ticket Generator Live Site](https://conference-ticket-generator-alpha.vercel.app/)
+
+### Age Calculator
+- **Description**: This project is an age calculator that allows users to input their birthdate and calculates their age in years, months, and days. It provides a simple and user-friendly interface for users to determine their exact age.
+- **Technology Stack**: HTML, CSS, JavaScript
+- **Branch**: `age-calculator`
+- **Repository**: [Age Calculator](https://github.com/aminetiouk/frontendmentor_projects/tree/age-caclulator-app)
+- [Age Calculator Live Site](https://age-calculator.vercel.app/)
 
 ## Getting Started
 
